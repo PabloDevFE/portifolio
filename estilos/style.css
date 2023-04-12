@@ -1,15 +1,78 @@
+/*MOBILE*/
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#part-roxa {
-  height: 100vh;
-  background-image: linear-gradient(
-    185deg,
-    rgb(119, 0, 183) 60%,
-    rgb(255, 255, 255)
-  );
+body {
+  background-color: rgb(233, 233, 233);
 }
 
+/*PARTE ROXA - TEXTO + PERFIL*/
+div#apresentacao > article {
+  max-width: 500px;
+  display: block;
+  margin: auto;
+  text-align: justify;
+  padding-top: 100px;
+}
+
+div#apresentacao > article > p, h1{
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+#desenho-perfil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  max-width: 97vw;
+}
+
+div.bg-roxo {
+  height: 130vh;
+  background-image: linear-gradient(
+    180deg,
+    rgb(119, 0, 183) 70%,
+    transparent
+  );
+} 
+
+/*PARTE BRANCA E LARANJA*/
+div#corpo {
+  height: 100vh;
+}
+
+section#corpo-conteudo {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  width: 400px;
+
+  padding: 0px 20px 0px 20px;
+  background-color: #fff;
+}
+
+.bg-branco {
+  height: 70vh;
+}
+
+.bg-halftone {
+
+  height: 70vh;
+  background-image: url(../midias/halftone.png);
+  background-repeat: repeat-x;
+  background-position: bottom center;
+  background-size: 600px;
+  
+}
+.bg-laranja {
+  height: 50vh;
+  background-color: #ff9554;
+}
