@@ -1,132 +1,15 @@
 * {
-    box-sizing: border-box;
-}
-
-body {
-  --size: 0.75rem;
-  font-family: Helvetica, sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  padding: clamp(1rem, 2vw, 5rem);
-  background: hsl(200deg 20% 10%);
-  color-scheme: dark;
-  color: white;
-  accent-color: hotpink;
-}
-
-.card {
-    --mask: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0.5));
-    --dotsColor: 255 255 255;
-    --bg: radial-gradient(circle at center, rgb(var(--dotsColor)) 3%, rgb(var(--dotsColor) / 0.4) var(--dotRadius, 70%));
-    --bgSize: var(--size);
-    --cardBg: linear-gradient(135deg, hotpink, blue);
-    background: var(--cardBg);
-    overflow: hidden;
-    border: 2px solid;
-    border-image: var(--cardBg) 30;
-  }
-
-.halftone {
-  position: relative;
-  aspect-ratio: 1;
-  background: rgb(0 0 0);
-  filter: contrast(var(--contrast, 20)) invert(var(--invert, 0));
-  mix-blend-mode: var(--blendMode, multiply);
-}
-
-.halftone::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: var(--bg);
-  background-size: var(--bgSize, 0.75rem) var(--bgSize, 0.75rem);
-  background-repeat: round;
-  background-position: 0 0, var(--bgPosition) var(--bgPosition);
-  -webkit-mask-image: var(--mask);
-  mask-image: var(--mask);
-  mask-size: cover;
-  mask-position: center;
-  transition: background-size 100ms;
-}
-
-
-/*
- {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 #part-roxa {
-    display: none;
   height: 100vh;
   background-image: linear-gradient(
     185deg,
-    rgb(119, 0, 183),
+    rgb(119, 0, 183) 60%,
     rgb(255, 255, 255)
   );
 }
 
-#halftone {
-    --dotSize: 0.25rem;
-    --stop1: 0.06rem;
-    --stop2: 0.65rem;
-  }
-  
-#halftone::after {
-    mask-image: linear-gradient(rgb(0, 0, 0), rgb(0 0 0 / 0.5));
-    width: 300px;
-    height: 300px;
-
-    
-    content: '';
-    position: absolute;
-    inset: 0;
-  
-    
-    background-image: radial-gradient(
-      circle at center,
-      black var(--dotSize),
-      transparent 0
-    );
-    background-size: 1.3rem 1.3rem;
-    background-position: 0 0, 0.65rem 0.65rem;
-  }
-
-  .halftone::after {
-    --mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0.5));
-  }
-*/
-
-/*
-header{
-    height: 300px;
-}
-
-footer {
-    background-color: #FF804D;
-    opacity: 100%;
-    height: 300px;
-}
-
-#bg {
-  position: relative;
-  height: 300px;
-  background: linear-gradient( 360deg, #FF804D, #ffffff ); 
-  --mask: linear-gradient(red, #{rgba(#000, 0.9)});
-    opacity: 100%;
-}
-
-#bg::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: radial-gradient(#fff, transparent) 100px 100px / 10px 10px space;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-  content: "";
-    opacity: 30%;
-}
-*/
