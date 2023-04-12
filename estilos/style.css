@@ -1,46 +1,61 @@
 /*MOBILE*/
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-body {
+body, html {
   background-color: rgb(233, 233, 233);
 }
 
+:root {
+  --preto-dff: #161A1D;
+  --roxo: #5D4ADA;
+  --azul: #0064CE;
+  --branco-dff: #F2F2F2;
+  --laranja: #FE9554;
+  --rosa: #F5C3C6;
+}
+
 /*PARTE ROXA - TEXTO + PERFIL*/
-div#apresentacao > article {
-  max-width: 500px;
-  display: block;
-  margin: auto;
-  text-align: justify;
-  padding-top: 100px;
-}
-
-div#apresentacao > article > p, h1{
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 20px;
-}
-
-#desenho-perfil {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  max-width: 97vw;
-}
-
 div.bg-roxo {
-  height: 130vh;
   background-image: linear-gradient(
     180deg,
-    rgb(119, 0, 183) 70%,
+    var(--roxo) 70%,
     transparent
   );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 } 
+
+div.texto-apresent > p {
+  max-width: 500px;
+  padding: 30px;
+  text-indent: 20px;
+  font-size: 1.2em;
+
+
+  display: block;
+  margin: auto;
+  color: var(--branco-dff);
+  text-align: justify;
+}
+
+div.texto-apresent > h1 {
+  color: var(--branco-dff);
+  text-align: center;
+  font-variant:small-caps;
+  padding-top: 150px;
+}
+
+div.imagem-perfil > img {
+  width: 100%;
+}
+
+ 
 
 /*PARTE BRANCA E LARANJA*/
 div#corpo {
