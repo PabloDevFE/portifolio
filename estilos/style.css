@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body, html {
-  background-color: rgb(233, 233, 233);
+  background-color: var(--branco-dff);
 }
 
 :root {
@@ -21,7 +21,7 @@ body, html {
 div.bg-roxo {
   background-image: linear-gradient(
     180deg,
-    var(--roxo) 70%,
+    var(--roxo) 90%,
     transparent
   );
 
@@ -58,36 +58,29 @@ div.imagem-perfil > img {
  
 
 /*PARTE BRANCA E LARANJA*/
-div#corpo {
-  height: 100vh;
+
+main {
+  background-image: linear-gradient(to bottom, var(--branco-dff) 60%, var(--laranja));
+  background-size: 100%;
+  padding-top: 150px;
 }
 
-section#corpo-conteudo {
-  position: absolute;
-  top: 140%;
-  left: 50%;
-  transform: translate(-50%, 0%);
+div.corpo {
+  background-color:#FFF;
+  max-width: 68vw;
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  width: 400px;
-
-  padding: 0px 20px 0px 20px;
-  background-color: #fff;
 }
 
-.bg-branco {
-  height: 70vh;
+div.corpo > h2 {
+  padding: 15px;
+  text-align: center;
 }
 
-.bg-halftone {
-
-  height: 70vh;
-  background-image: url(../midias/halftone.png);
-  background-repeat: repeat-x;
-  background-position: bottom center;
-  background-size: 600px;
-  
-}
-.bg-laranja {
-  height: 50vh;
-  background-color: #ff9554;
+div.corpo > p {
+  text-align: justify;
+  line-height: 25px;
+  text-indent: 20px;
 }
