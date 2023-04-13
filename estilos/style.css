@@ -26,7 +26,7 @@ div.bg-roxo {
   );
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
   justify-content: space-around;
 } 
@@ -36,6 +36,7 @@ div.texto-apresent > p {
   padding: 30px;
   text-indent: 20px;
   font-size: 1.2em;
+  padding-bottom: 150px;
 
 
   display: block;
@@ -48,7 +49,7 @@ div.texto-apresent > h1 {
   color: var(--branco-dff);
   text-align: center;
   font-variant:small-caps;
-  padding-top: 150px;
+  padding-top: 10px;
 }
 
 div.imagem-perfil > img {
