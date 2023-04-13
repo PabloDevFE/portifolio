@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 body, html {
-  background-color: var(--branco-dff);
+  background-color: var(--laranja);
 }
 
 :root {
@@ -22,7 +22,7 @@ div.bg-roxo {
   background-image: linear-gradient(
     180deg,
     var(--roxo) 90%,
-    transparent
+    var(--branco-dff)
   );
 
   display: flex;
@@ -60,7 +60,7 @@ div.imagem-perfil > img {
 /*PARTE BRANCA E LARANJA*/
 
 main {
-  background-image: linear-gradient(to bottom, var(--branco-dff) 60%, var(--laranja));
+  background-image: linear-gradient(to bottom, var(--branco-dff) 30%, var(--laranja));
   background-size: 100%;
   padding-top: 150px;
 }
@@ -71,7 +71,12 @@ div.corpo {
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
+  clip-path: polygon(0 0, 100% 0%, 100% 97%, 0% 100%);
+  z-index: 2;
+}
 
+div.perfil-preto > img{
+  width: 100%;
 }
 
 div.corpo > h2 {
@@ -83,4 +88,21 @@ div.corpo > p {
   text-align: justify;
   line-height: 25px;
   text-indent: 20px;
+  padding-bottom: 100px;
 }
+
+.rodape {
+  height:200px;
+  width: 100%;
+  background-color: var(--preto-dff);
+  z-index: 1;
+
+  position: relative;
+
+
+
+
+  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%); /*efeito poligono*/
+}
+
+/*PARTE PRETA - RODAPÉ*/
