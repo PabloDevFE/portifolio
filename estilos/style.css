@@ -17,6 +17,7 @@ body, html {
   --rosa: #F5C3C6;
 }
 
+
 /*PARTE ROXA - TEXTO + PERFIL*/
 div.bg-roxo {
   background-image: linear-gradient(
@@ -72,8 +73,8 @@ div.corpo {
   margin: auto;
   padding-left: 20px;
   padding-right: 20px;
-  clip-path: polygon(0 0, 100% 0%, 100% 97%, 0% 100%);
-  z-index: 2;
+
+  transform: translateY(100px);
 }
 
 div.perfil-preto > img{
@@ -93,15 +94,10 @@ div.corpo > p {
 }
 
 .rodape {
-  height:200px;
+  height:500px;
   width: 100%;
   background-color: var(--preto-dff);
   z-index: 1;
-
-  position: relative;
-
-
-
 
   clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%); /*efeito poligono*/
 }
