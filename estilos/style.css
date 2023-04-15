@@ -74,7 +74,7 @@ div.corpo {
   padding-left: 20px;
   padding-right: 20px;
 
-  transform: translateY(100px);
+  /*transform: translateY(10%);*/
 }
 
 div.perfil-preto > img{
@@ -93,13 +93,40 @@ div.corpo > p {
   padding-bottom: 100px;
 }
 
+div.habilidades {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+div.linguagens {
+  height: 100px;
+  width: 100px;
+  border: solid 2px black;
+}
+
+div.logo-linguagens > h3 {
+  text-align: center;
+}
+
+div.logo-linguagens > img {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+/*PARTE PRETA*/
+
 .rodape {
   height:500px;
   width: 100%;
   background-color: var(--preto-dff);
-  z-index: 1;
+  z-index: 0;
 
   clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%); /*efeito poligono*/
 }
 
-/*PARTE PRETA - RODAPÉ*/
+
