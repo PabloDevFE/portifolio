@@ -94,29 +94,63 @@ div.corpo > p {
   padding-bottom: 80px;
 }
 
-div.habilidades {
+section {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 5px 10px;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  row-gap: 30px;
 }
 
-div.linguagens {
-  height: 100px;
-  width: 100px;
-  border: solid 2px black;
+/*Animação FLIP*/
+.skill {
+  position: relative;
+  width: 200px;
+  height: 300px;
 }
 
-div.logo-linguagens > h3 {
-  text-align: center;
+.skill:hover .flip {
+  transform: rotateY(180deg);
 }
 
-div.logo-linguagens > img {
-  width: 80%;
-  display: block;
-  margin: auto;
+.flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  transition: .8s;
+}
+
+.frente, .tras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.137);
+  backface-visibility: hidden;
+}
+
+.frente {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#html-frente {
+  background-image: url(../midias/logo-html.png);
+}
+
+#css-frente {
+  background-image: url(../midias/logo-css.png);
+}
+
+#js-frente {
+  background-image: url(../midias/logo-js.png);
+}
+
+.tras {
+  transform: rotateY(180deg);
 }
 
 /*PARTE PRETA*/
