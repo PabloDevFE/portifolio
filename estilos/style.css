@@ -133,8 +133,13 @@ section {
 
 .frente {
   background-size: contain;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
+
+  text-align: center;
+  font-size: 25px;
+  font-variant: small-caps;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 #html-frente {
