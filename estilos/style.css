@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @font-face {
   font-family: 'Another Tag';
   src: url(../fonts/aAnotherTag.ttf) format('truetype');
@@ -50,60 +52,7 @@ p {
 
 
 /*CABECALHO*/
-header {
-  background-color: black;
-  padding: 5px;
-  width: 100vw;
-  position: fixed;
-  z-index: 999;
-  padding: 9px;
 
-  display: flex;
-  justify-content: space-between;
-}
-
-.img-cabecalho {
-  width: 50%;
-}
-
-.img-cabecalho > img {
-  height: 40px;
-  display: block;
-  margin: auto;
-}
-
-.botoes-cabecalho {
-  width: 50%;
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
-
-}
-
-.menu {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  
-  display: none;
-}
-
-.menu > button {
-
-}
-
-.botoes-cabecalho > a {
-  color: var(--laranja);
-  text-decoration: none;
-  font-family: var(--titulos);
-  font-size: 25px;
-  padding: 2px;
-  border-left: 1px solid var(--laranja) ;
-  border-right: 1px solid var(--laranja) ;
-  text-align: center;
-}
 
 /*PARTE ROXA - TEXTO + PERFIL*/
 div.bg-roxo {

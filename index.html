@@ -9,23 +9,7 @@
   </head>
   <body>
 
-    <header>
-
-      <div class="img-cabecalho">       
-        <img src="midias/logo-header-b.png" alt="">
-      </div>
-
-      <div class="botoes-cabecalho">
-        <a href="#">APRESENTACAO</a>
-        <a href="#">SKILLS</a>
-        <a href="#">CONTATOS</a>     
-      </div>
-
-      <div class="menu">
-      <button>Menu</button>
-      </div>
-
-    </header>
+    <header></header>
 
     <div class="bg-roxo">
 
@@ -114,6 +98,17 @@
     <footer class="rodape">
 
     </footer>
+
+    <script>
+      const btnMobile = document.getElementById('btn-mobile')
+
+      function toggleMenu() {
+        const nav = document.getElementById('nav')
+        nav.classList.toggle('active')
+      }
+
+      btnMobile.addEventListener('click', toggleMenu)
+    </script>
 
   </body>
 </html>
