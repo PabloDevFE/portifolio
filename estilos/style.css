@@ -78,7 +78,6 @@ header {
   justify-content: space-around;
   align-items: center;
 
-  display: none;
 }
 
 .menu {
@@ -86,6 +85,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  
+  display: none;
 }
 
 .menu > button {
