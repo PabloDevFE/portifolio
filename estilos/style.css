@@ -17,6 +17,16 @@ body, html {
   --rosa: #F5C3C6;
 }
 
+/*CABECALHO*/
+header {
+  background-color: black;
+  height: 80px;
+  position: sticky;
+}
+
+header > img {
+  height: 70px;
+}
 
 /*PARTE ROXA - TEXTO + PERFIL*/
 div.bg-roxo {
