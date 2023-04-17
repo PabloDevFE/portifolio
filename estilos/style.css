@@ -1,11 +1,38 @@
+@font-face {
+  font-family: 'Another Tag';
+  src: url(../fonts/aAnotherTag.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gameshow';
+  src: url(../fonts/Gameshow.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Made Tommy';
+  src: url(../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf);
+}
+
 /*MOBILE*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body, html {
   background-color: var(--laranja);
+}
+
+h1, h2, h3 {
+  font-family: var(--titulos);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+p {
+  font-family: var(--textos);
+  font-weight: 400;
 }
 
 :root {
@@ -15,17 +42,65 @@ body, html {
   --branco-dff: #F2F2F2;
   --laranja: #FE9554;
   --rosa: #F5C3C6;
+
+  --titulos: 'Gameshow';
+  --textos: 'Made Tommy';
+  --estilizada: 'Another Tag'
 }
+
 
 /*CABECALHO*/
 header {
   background-color: black;
-  height: 80px;
-  position: sticky;
+  padding: 5px;
+  width: 100vw;
+  position: fixed;
+  z-index: 999;
+  padding: 9px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
-header > img {
-  height: 70px;
+.img-cabecalho {
+  width: 50%;
+}
+
+.img-cabecalho > img {
+  height: 40px;
+  display: block;
+  margin: auto;
+}
+
+.botoes-cabecalho {
+  width: 50%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+
+  display: none;
+}
+
+.menu {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu > button {
+
+}
+
+.botoes-cabecalho > a {
+  color: var(--laranja);
+  text-decoration: none;
+  font-family: var(--titulos);
+  font-size: 25px;
+  padding: 2px;
+  border-left: 1px solid var(--laranja) ;
+  border-right: 1px solid var(--laranja) ;
+  text-align: center;
 }
 
 /*PARTE ROXA - TEXTO + PERFIL*/
@@ -59,8 +134,8 @@ div.texto-apresent > p {
 div.texto-apresent > h1 {
   color: var(--branco-dff);
   text-align: center;
-  font-variant:small-caps;
   padding-top: 10px;
+  font-size: 100px;
 }
 
 div.imagem-perfil > img {
@@ -84,8 +159,9 @@ div.corpo {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 300px;
+  z-index: 0;
 
-  transform: translateY(10%);
+  transform: translateY(5%);
 }
 
 div.perfil-preto > img{
@@ -95,6 +171,7 @@ div.perfil-preto > img{
 div.corpo > h2 {
   padding: 15px;
   text-align: center;
+  font-size: 100px;
 }
 
 div.corpo > p {
