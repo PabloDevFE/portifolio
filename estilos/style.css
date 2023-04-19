@@ -74,6 +74,7 @@ div.texto-apresent > p {
   text-indent: 20px;
   font-size: 1.2em;
   padding-bottom: 50px;
+  font-family: var(--textos);
 
 
   display: block;
@@ -110,7 +111,7 @@ div.imagem-perfil > img {
 /*PARTE BRANCA E LARANJA*/
 
 main {
-  background-image: linear-gradient(to bottom, var(--branco-dff) 30%, var(--laranja));
+  background-image: linear-gradient(to bottom, var(--branco-dff) 60%, var(--laranja));
   background-size: 100%;
   padding-top: 150px;
 }
@@ -132,12 +133,13 @@ div.perfil-preto > img{
 }
 
 div.corpo > h2 {
-  padding: 15px;
+  padding: 70px 10px 20px 10px;
   text-align: center;
   font-size: 60px;
 }
 
 div.corpo > p {
+  font-family: var(--textos);
   text-align: justify;
   line-height: 25px;
   text-indent: 20px;
@@ -208,11 +210,12 @@ section {
 
 .tras {
   transform: rotateY(180deg);
+  padding: 5px;
 }
 
 .tras h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 /*RODAPÉ*/
