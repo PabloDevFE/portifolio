@@ -157,11 +157,12 @@ div.corpo > blockquote {
   margin-bottom: 30px;
   text-align: justify;
   font-family: var(--textos);
-  font-size: 13px;
+  font-size: 14px;
   color: var(--branco-dff);
   border-radius: 20px;
   opacity: 60%;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.616);
+  font-variant: small-caps;
 }
 
 section {
