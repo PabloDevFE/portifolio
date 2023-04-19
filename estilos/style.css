@@ -100,6 +100,7 @@ div.texto-apresent > h1 {
   text-align: center;
   padding-top: 10px;
   font-size: 70px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.459);
 }
 
 div.imagem-perfil > img {
@@ -136,6 +137,7 @@ div.corpo > h2 {
   padding: 70px 10px 20px 10px;
   text-align: center;
   font-size: 60px;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.315);
 }
 
 div.corpo > p {
@@ -144,6 +146,22 @@ div.corpo > p {
   line-height: 25px;
   text-indent: 20px;
   padding-bottom: 50px;
+}
+
+div.corpo > blockquote {
+  width: 85%;
+  display: block;
+  margin: auto;
+  background-color: var(--laranja);
+  padding: 15px;
+  margin-bottom: 30px;
+  text-align: justify;
+  font-family: var(--textos);
+  font-size: 13px;
+  color: var(--branco-dff);
+  border-radius: 20px;
+  opacity: 60%;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.616);
 }
 
 section {
