@@ -70,10 +70,9 @@ div.bg-roxo {
 
 div.texto-apresent > p {
   max-width: 500px;
-  padding: 30px;
+  padding: 10px 30px 80px 30px;
   text-indent: 20px;
   font-size: 1.2em;
-  padding-bottom: 50px;
   font-family: var(--textos);
 
 
@@ -134,9 +133,9 @@ div.perfil-preto > img{
 }
 
 div.corpo > h2 {
-  padding: 70px 10px 20px 10px;
+  padding: 40px 10px 20px 10px;
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.315);
 }
 
@@ -155,7 +154,7 @@ div.corpo > blockquote {
   background-color: var(--laranja);
   padding: 15px;
   margin-bottom: 30px;
-  text-align: justify;
+  text-align: center;
   font-family: var(--textos);
   font-size: 14px;
   color: var(--branco-dff);
@@ -227,6 +226,10 @@ section {
   background-image: url(../midias/logo-js.png);
 }
 
+#react-frente {
+  background-image: url(../midias/logo-react.png);
+}
+
 .tras {
   transform: rotateY(180deg);
   padding: 5px;
@@ -243,9 +246,17 @@ section {
   height:500px;
   width: 100%;
   background-color: var(--preto-dff);
-  z-index: 0;
+  z-index: 999;
 
-  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%); /*efeito poligono*/
+  clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%); /*efeito poligono*/
+}
+
+.rodape > h1 {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  transform: translateY(30px);
+  rotate: -9deg;
 }
 
 
