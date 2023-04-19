@@ -262,3 +262,21 @@ section {
   transform: translateY(30px);
   rotate: -9deg;
 }
+
+div#contatos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 15px;
+  transform: translateY(60px);
+}
+
+.redes {
+  filter: invert();
+  border-radius: 20px;
+  max-width: 200px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
