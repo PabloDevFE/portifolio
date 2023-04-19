@@ -58,7 +58,7 @@ p {
 div.bg-roxo {
   background-image: linear-gradient(
     180deg,
-    var(--roxo) 90%,
+    var(--roxo) 70%,
     var(--branco-dff)
   );
 
@@ -73,7 +73,7 @@ div.texto-apresent > p {
   padding: 30px;
   text-indent: 20px;
   font-size: 1.2em;
-  padding-bottom: 150px;
+  padding-bottom: 50px;
 
 
   display: block;
@@ -82,11 +82,23 @@ div.texto-apresent > p {
   text-align: justify;
 }
 
+#transi > p {
+  font-family: var(--titulos);
+  font-size: 70px;
+  rotate: -3deg;
+  color: var(--branco-dff);
+  opacity: 40%;
+}
+
+#transi {
+  padding-bottom: 200px;
+}
+
 div.texto-apresent > h1 {
   color: var(--branco-dff);
   text-align: center;
   padding-top: 10px;
-  font-size: 100px;
+  font-size: 70px;
 }
 
 div.imagem-perfil > img {
@@ -112,7 +124,7 @@ div.corpo {
   padding-bottom: 300px;
   z-index: 0;
 
-  transform: translateY(5%);
+  transform: translateY(4%);
 }
 
 div.perfil-preto > img{
@@ -122,28 +134,28 @@ div.perfil-preto > img{
 div.corpo > h2 {
   padding: 15px;
   text-align: center;
-  font-size: 100px;
+  font-size: 60px;
 }
 
 div.corpo > p {
   text-align: justify;
   line-height: 25px;
   text-indent: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 50px;
 }
 
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 30px;
+  row-gap: 80px;
 }
 
 /*Animação FLIP*/
 .skill {
   position: relative;
   width: 200px;
-  height: 300px;
+  height: 250px;
 }
 
 .skill:hover .flip {
@@ -168,11 +180,12 @@ section {
   border: solid 2px black;
   box-shadow: 4px 4px 1px black;
   backface-visibility: hidden;
+  overflow: hidden;
 }
 
 .frente {
   background-size: contain;
-  background-position: center bottom;
+  background-position: center ;
   background-repeat: no-repeat;
 
   text-align: center;
@@ -197,7 +210,12 @@ section {
   transform: rotateY(180deg);
 }
 
-/*PARTE PRETA*/
+.tras h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+/*RODAPÉ*/
 
 .rodape {
   height:500px;
