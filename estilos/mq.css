@@ -23,13 +23,11 @@
     }
 
     div#contatos {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 200px);
+        gap: 30px;
         justify-content: center;
-        align-items: flex-start;
-        row-gap: 15px;
-        transform: translateY(60px);
-        padding-left: 30px;
+        transform: translateY(100px);
     }
 }
 

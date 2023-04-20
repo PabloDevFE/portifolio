@@ -108,7 +108,7 @@ div.imagem-perfil > img {
 /*PARTE BRANCA E LARANJA*/
 
 main {
-  background-image: linear-gradient(to bottom, var(--branco-dff) 60%, var(--laranja));
+  background-image: linear-gradient(to bottom, var(--branco-dff) 80%, var(--laranja));
   background-size: 100%;
 }
 
