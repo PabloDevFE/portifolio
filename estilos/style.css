@@ -88,7 +88,7 @@ div.texto-apresent > p {
 }
 
 #transi {
-  padding-bottom: 200px;
+  padding-bottom: 50px;
 }
 
 div.texto-apresent > h1 {
@@ -110,7 +110,6 @@ div.imagem-perfil > img {
 main {
   background-image: linear-gradient(to bottom, var(--branco-dff) 60%, var(--laranja));
   background-size: 100%;
-  padding-top: 100px;
 }
 
 div.corpo {
@@ -145,7 +144,7 @@ div.corpo > p {
 }
 
 div.corpo > blockquote {
-  max-width: 150px;
+  max-width: 220px;
   display: block;
   margin: auto;
   background-color: var(--laranja);
