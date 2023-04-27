@@ -234,7 +234,7 @@ div.corpo > blockquote {
 .rodape {
   height:500px;
   width: 100%;
-  background-color: var(--preto-dff);
+  background-image: linear-gradient(to bottom, var(--preto-dff), black);
   z-index: 999;
 
   clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 100%); /*efeito poligono*/
