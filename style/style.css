@@ -86,9 +86,9 @@
     height: 100vh;
     overflow-y: hidden;
 
-    background: linear-gradient(-45deg, #B143E6, #8B46F0, #5D4AD8, #465CF0);
+    background: linear-gradient(-45deg, #5d4ad8, #4738a6, #261e59, #3D3959); /* #413499, #5241BF, #4d3db4, #4e287a*/
 	background-size: 400% 400%;
-	animation: gradientPerfil 12s ease infinite;
+	animation: gradientPerfil 15s ease infinite;
 	height: 100vh;
 }
 
