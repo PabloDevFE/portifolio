@@ -86,8 +86,10 @@
     height: 100vh;
     overflow-y: hidden;
 
-    background-image: linear-gradient(to right top, #5d4ad8, #5747ca, #5243bc, #4d40ae, #483ca0, 
-    #4c40a2, #5144a3, #5548a5, #6355b6, #7163c8, #8071da, #8e7fec);
+    background: linear-gradient(-45deg, #B143E6, #8B46F0, #5D4AD8, #465CF0);
+	background-size: 400% 400%;
+	animation: gradientPerfil 12s ease infinite;
+	height: 100vh;
 }
 
 .perfilImgDiv {
@@ -116,6 +118,10 @@
     font-size: 23px;
 }
 
+.perfilDescription {
+    text-shadow: 1px 2px 3px#000;
+}
+
 .perfilContact {
     text-align: right;
 }
@@ -128,4 +134,17 @@
     filter: invert(0);
     width: 40px;
     height: 40px;
+}
+
+/*ANIMAÇÕES*/
+@keyframes gradientPerfil {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
