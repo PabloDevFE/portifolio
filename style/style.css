@@ -1,3 +1,18 @@
+@font-face {
+    font-family: 'Another Tag';
+    src: url(../fonts/aAnotherTag.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Gameshow';
+    src: url(../fonts/Gameshow.ttf) format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Made Tommy';
+    src: url(../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) format('opentype');
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +38,14 @@
     align-items: center;
     justify-content: space-around;
     padding: 5px;
+    height: 50px;
+    width: 100vw;
+
+    /*fixar o header*/
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
 }
 
 .headerLogo {
@@ -35,5 +58,74 @@
     justify-content: space-around;
 }
 
+.navIcon {
+    color: var(--offWhite);
+    text-decoration: none;
+    font-family: 'Gameshow', sans-serif;
+    font-size: 30px;
+}
+
+.headerNav a:hover {
+    color: #000;
+    background-color: rgb(255, 255, 255);
+    transition: 0.7s;
+    transform: scale(1.1);
+}
+
+.darkIcon {
+    width: 32px;
+    filter: invert(1);
+}
+
 
 /*SECTION PURPLE*/
+.sectionTop {
+    display: flex;
+    align-items: center;
+
+    height: 100vh;
+    overflow-y: hidden;
+
+    background-image: linear-gradient(to right top, #5d4ad8, #5747ca, #5243bc, #4d40ae, #483ca0, 
+    #4c40a2, #5144a3, #5548a5, #6355b6, #7163c8, #8071da, #8e7fec);
+}
+
+.perfilImgDiv {
+    width: 40%;
+}
+
+.perfilImg {
+    width: 100%;
+
+    display: block;
+    margin: auto;
+}
+
+.perfilTexts {
+    color: var(--offWhite);
+}
+
+.perfilTexts h1 {
+    font-family: 'Another Tag', sans-serif;
+    font-size: 110px;
+    text-shadow: 1px 3px 5px #000;
+}
+
+.perfilTexts p {
+    font-family: 'Made Tommy', sans-serif;
+    font-size: 23px;
+}
+
+.perfilContact {
+    text-align: right;
+}
+
+.perfilContact a {
+    text-decoration: none;
+}
+
+.socialMediaIcon {
+    filter: invert(0);
+    width: 40px;
+    height: 40px;
+}
