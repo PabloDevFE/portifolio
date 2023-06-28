@@ -13,6 +13,11 @@
     src: url(../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) format('opentype');
   }
 
+@font-face {
+    font-family: 'Secret';
+    src: url(../fonts/SECRETODEMOREGULAR.TTF);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -108,8 +113,8 @@
 }
 
 .perfilTexts h1 {
-    font-family: 'Another Tag', sans-serif;
-    font-size: 110px;
+    font-family: 'Secret', sans-serif;
+    font-size: 120px;
     text-shadow: 1px 3px 5px #000;
 }
 
