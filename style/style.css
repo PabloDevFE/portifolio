@@ -88,58 +88,12 @@
     display: flex;
     align-items: center;
 
-    height: 100vh;
-    overflow-y: hidden;
 
     background: linear-gradient(-45deg, #5d4ad8, #4738a6, #261e59, #3D3959); /* #413499, #5241BF, #4d3db4, #4e287a*/
 	background-size: 400% 400%;
 	animation: gradientPerfil 15s ease infinite;
-	height: 100vh;
 }
 
-.perfilImgDiv {
-    width: 40%;
-}
-
-.perfilImg {
-    width: 100%;
-
-    display: block;
-    margin: auto;
-}
-
-.perfilTexts {
-    color: var(--offWhite);
-}
-
-.perfilTexts h1 {
-    font-family: 'Secret', sans-serif;
-    font-size: 120px;
-    text-shadow: 1px 3px 5px #000;
-}
-
-.perfilTexts p {
-    font-family: 'Made Tommy', sans-serif;
-    font-size: 23px;
-}
-
-.perfilDescription {
-    text-shadow: 1px 2px 3px#000;
-}
-
-.perfilContact {
-    text-align: right;
-}
-
-.perfilContact a {
-    text-decoration: none;
-}
-
-.socialMediaIcon {
-    filter: invert(0);
-    width: 40px;
-    height: 40px;
-}
 
 /*ANIMAÇÕES*/
 @keyframes gradientPerfil {
@@ -153,3 +107,9 @@
 		background-position: 0% 50%;
 	}
 }
+
+
+/*BACKGROUND
+
+
+*/
