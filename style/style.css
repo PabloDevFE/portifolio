@@ -22,6 +22,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 :root {
@@ -35,64 +36,95 @@
     --white: #fff;
 }
 
-/*CABEÇALHO*/
 
+
+/*CABEÇALHO*/
 .header {
-    background-color: #161a1c;
+    background-color: #000;
+    padding: 5px 50px;
+
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 5px;
-    height: 50px;
-    width: 100vw;
-
-    /*fixar o header*/
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    z-index: 1;
+    justify-content: space-between;
 }
 
 .headerLogo {
-    height: 30px;
+    width: 120px;
+    height: 40px;
 }
 
 .headerNav {
+    display: none;
+
     width: 50%;
-    display: flex;
-    justify-content: space-around;
+    /*display: flex;*/
+    justify-content: space-between;
 }
 
-.navIcon {
-    color: var(--offWhite);
-    text-decoration: none;
-    font-family: 'Gameshow', sans-serif;
-    font-size: 30px;
+.headerNav a {    
+    font-family: 'Gameshow';
+    color: #fff;
+    font-size: 35px;
 }
 
-.headerNav a:hover {
+.navIcon:hover {
+    background-color: #fff;
     color: #000;
-    background-color: rgb(255, 255, 255);
-    transition: 0.7s;
-    transform: scale(1.1);
+    transition: .8s;
+    font-size: 38px;
 }
 
-.darkIcon {
+.menuMobile {
+
+}
+
+.menuImg {
     width: 32px;
-    filter: invert(1);
 }
 
 
 /*SECTION PURPLE*/
-.sectionTop {
+.sectionPerfil {
+    padding-bottom: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
 
-
-    background: linear-gradient(-45deg, #5d4ad8, #4738a6, #261e59, #3D3959); /* #413499, #5241BF, #4d3db4, #4e287a*/
+    background: linear-gradient(-45deg, #5d4ad8, #4738a6, #261e59, #3D3959); 
 	background-size: 400% 400%;
 	animation: gradientPerfil 15s ease infinite;
 }
+
+.divPerfil {
+    width: 100%;
+}
+
+.desenhoPerfil {
+    width: 100%;
+    max-width: 400px;
+    
+    display: block;
+    margin: auto;
+}
+
+.textPerfil {
+    color: #fff;
+}
+
+.textPerfil h1 {
+    font-family: 'Secret';
+    font-size: 90px;
+}
+
+.textPerfil p {
+    font-family: 'Made Tommy';
+    font-size: 20px;
+}
+
+
+
+
+
 
 
 /*ANIMAÇÕES*/
@@ -107,9 +139,3 @@
 		background-position: 0% 50%;
 	}
 }
-
-
-/*BACKGROUND
-
-
-*/
