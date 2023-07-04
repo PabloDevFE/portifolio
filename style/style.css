@@ -36,7 +36,9 @@
     --white: #fff;
 }
 
-
+h1, h2 {
+    font-family: 'Secret';
+}
 
 
 
@@ -86,9 +88,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    position: absolute;
+    position: fixed;
     top: 60px;
     transition: .5s;
+    z-index: 0;
 
     width: 100%;
     background-color: #161a1c;
@@ -100,6 +103,7 @@
     color: #fff;
     font-size: 25px;
     padding: 2px 5px;
+    margin: 0px 5px;
 }
 
 .menuImg {
@@ -113,7 +117,7 @@
 
 /*SECTION PURPLE*/
 .sectionPerfil {
-    padding: 30px 0px;
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,16 +139,28 @@
     margin: auto;
 }
 
-.textPerfil {
+.divTextPerfil {
     color: #fff;
 }
 
-.textPerfil h1 {
-    font-family: 'Secret';
-    font-size: 90px;
+.divSocialMidias {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
-.textPerfil p {
+.iconRedes {
+    width: clamp(30px, 8vw, 45px);
+}
+
+.divTextPerfil h1 {
+    text-shadow: 2px 2px 5px black;
+    font-size: clamp(80px, 22vw, 150px);
+    /*CLAMP(VALOR MINIMO, VALOR DESEJADO, VALOR MAXIMO*/
+}
+
+.divTextPerfil p {
+    text-shadow: 1px 2px 3px black;
     font-family: 'Made Tommy';
     font-size: 20px;
 }
