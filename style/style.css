@@ -85,15 +85,18 @@ h1, h2 {
 
 .menu {
     /*MENU PARA DISPOSITIVOS MOBILE*/
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     position: fixed;
+    gap: 10px;
     top: 60px;
+    right: 0;
     transition: .5s;
-    z-index: 0;
 
-    width: 100%;
+    width: 200px;
+    height: 300px;
     background-color: #161a1c;
     padding: 5px;
 }
@@ -101,7 +104,7 @@ h1, h2 {
 .menu a {
     font-family: 'Gameshow';
     color: #fff;
-    font-size: 25px;
+    font-size: 30px;
     padding: 2px 5px;
     margin: 0px 5px;
 }
