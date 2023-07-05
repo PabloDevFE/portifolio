@@ -85,7 +85,7 @@ h1, h2 {
 
 .menu {
     /*MENU PARA DISPOSITIVOS MOBILE*/
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -93,7 +93,7 @@ h1, h2 {
     gap: 10px;
     top: 60px;
     right: 0;
-    transition: .5s;
+    transition: .8s;
 
     width: 200px;
     height: 300px;
