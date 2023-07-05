@@ -40,6 +40,9 @@ h1, h2 {
     font-family: 'Secret';
 }
 
+p {
+    font-family: 'Made Tommy';
+}
 
 
 /*CABEÇALHO*/
@@ -85,7 +88,7 @@ h1, h2 {
 
 .menu {
     /*MENU PARA DISPOSITIVOS MOBILE*/
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -127,7 +130,7 @@ h1, h2 {
 
     background: linear-gradient(-45deg, #5d4ad8, #4738a6, #261e59, #3D3959); 
 	background-size: 400% 400%;
-	animation: gradientPerfil 15s ease infinite;
+	animation: gradientPerfil 10s ease infinite;
 }
 
 .divPerfil {
@@ -143,7 +146,7 @@ h1, h2 {
 }
 
 .divTextPerfil {
-    color: #fff;
+    color: var(--offWhite);
 }
 
 .divSocialMidias {
@@ -165,8 +168,46 @@ h1, h2 {
 .divTextPerfil p {
     text-shadow: 1px 2px 3px black;
     font-family: 'Made Tommy';
-    font-size: 20px;
+    font-size: clamp(15px, 5vw, 30px);
 }
+
+
+
+
+
+
+/*CORPO DA PAGINA*/
+.section {
+    background-color: var(--offWhite);
+}
+
+section h2 {
+    padding: 10px;
+    text-align: center;
+    color: var(--offBlack);
+    font-size: clamp(30px, 12vw, 100px);
+}
+
+.sectionSobre p {
+    color: var(--offBlack);
+    padding: 5px;
+    line-height: 15px;
+    text-align: justify;
+
+    display: block;
+    margin: auto;
+    width: clamp(300px, 80vw, 500px );
+}
+
+.sobreImg {
+    display: block;
+    margin: auto;
+    width: clamp(300px, 80vw, 500px );
+}
+
+
+
+
 
 
 
