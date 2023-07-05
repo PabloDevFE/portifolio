@@ -182,7 +182,7 @@ p {
 }
 
 section h2 {
-    padding: 100px 0px 10px 0px;
+    padding: 40px 0px 10px 0px;
     text-align: center;
     color: var(--offBlack);
     font-size: clamp(30px, 12vw, 100px);
