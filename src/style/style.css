@@ -165,6 +165,7 @@ p {
 }
 
 .divTextPerfil h1 {
+    padding: 3px;
     text-shadow: 2px 2px 5px black;
     font-size: clamp(80px, 22vw, 150px);
     /*CLAMP(VALOR MINIMO, VALOR DESEJADO, VALOR MAXIMO*/
@@ -201,13 +202,13 @@ section h2 {
 
     display: block;
     margin: auto;
-    width: clamp(300px, 80vw, 500px );
+    width: clamp(200px, 80vw, 500px );
 }
 
 .sobreImg {
     display: block;
     margin: auto;
-    width: clamp(300px, 80vw, 500px );
+    width: clamp(200px, 80vw, 500px );
 }
 
 
