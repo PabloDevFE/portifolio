@@ -25,6 +25,11 @@
     text-decoration: none;
 }
 
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
 :root {
     --offBlack: #161a1c;
     --offWhite: #f2f2f2;
