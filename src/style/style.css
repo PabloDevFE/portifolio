@@ -15,7 +15,7 @@
 
 @font-face {
     font-family: 'Secret';
-    src: url(../fonts/SECRETODEMOREGULAR.TTF);
+    src: url(../fonts/SECRETODEMOREGULAR.TTF) format('truetype');
 }
 
 * {
@@ -182,7 +182,7 @@ p {
 }
 
 section h2 {
-    padding: 10px;
+    padding: 100px 0px 10px 0px;
     text-align: center;
     color: var(--offBlack);
     font-size: clamp(30px, 12vw, 100px);
