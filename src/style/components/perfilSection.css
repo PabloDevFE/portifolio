@@ -1,0 +1,74 @@
+:root {
+    --offBlack: #161a1c;
+    --offWhite: #f2f2f2;
+    --blue: #0064cf;
+    --purple: #5d4ad8;
+    --orange: #ff8554;
+    --pink: #f5c3c6;
+    --black: #000;
+    --white: #fff;
+}
+
+/*SECTION ROXA*/
+.sectionPerfil {
+    padding: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: linear-gradient(-45deg, #5d4ad8, #4738a6, #261e59, #3D3959); 
+	background-size: 400% 400%;
+	animation: gradientPerfil 10s ease infinite;
+}
+
+.divPerfil {
+    width: 100%;
+}
+
+.desenhoPerfil {
+    width: 100%;
+    max-width: 400px;
+    
+    display: block;
+    margin: auto;
+}
+
+.divTextPerfil {
+    color: var(--offWhite);
+}
+
+.divSocialMidias {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.iconRedes {
+    width: clamp(30px, 8vw, 45px);
+}
+
+.divTextPerfil h1 {
+    text-shadow: 2px 2px 5px black;
+    font-size: clamp(80px, 22vw, 150px);
+    /*CLAMP(VALOR MINIMO, VALOR DESEJADO, VALOR MAXIMO*/
+}
+
+.divTextPerfil p {
+    text-shadow: 1px 2px 3px black;
+    font-family: 'Made Tommy';
+    font-size: clamp(10px, 4vw, 30px);
+}
+
+
+@keyframes gradientPerfil {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

@@ -25,10 +25,16 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     width: 100vw;
     height: 100vh;
 }
+
+
 
 :root {
     --offBlack: #161a1c;
@@ -41,151 +47,18 @@ body {
     --white: #fff;
 }
 
+
+
+.hidden {
+    display: none;
+}
+
 h1, h2 {
     font-family: 'Secret';
 }
 
 p {
     font-family: 'Made Tommy';
-}
-
-
-/*CABEÇALHO*/
-.header {
-    background-color: #000;
-    padding: 5px 50px;
-    height: 60px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    position: fixed;
-    top:0px;
-    width: 100%;
-}
-
-.headerLogo {
-    width: 120px;
-    height: 40px;
-}
-
-.headerNav {
-    display: none;
-
-    width: 50%;
-    /*display: flex;*/
-    justify-content: space-between;
-}
-
-.headerNav a {    
-    font-family: 'Gameshow';
-    color: #fff;
-    font-size: 35px;
-}
-
-.navIcon:hover {
-    background-color: #fff;
-    color: #000;
-    transition: .8s;
-    font-size: 38px;
-}
-
-.menu {
-    /*MENU PARA DISPOSITIVOS MOBILE*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: fixed;
-    gap: 10px;
-    top: 60px;
-    right: 0;
-    transition: .8s;
-
-    width: 200px;
-    height: 300px;
-    background-color: #161a1c;
-    padding: 5px;
-}
-
-.menu a {
-    font-family: 'Gameshow';
-    color: #fff;
-    font-size: 30px;
-    padding: 2px 5px;
-    margin: 0px 5px;
-}
-
-.menuImg {
-    width: 32px;
-}
-
-
-
-
-
-
-/*SECTION PURPLE*/
-.sectionPerfil {
-    padding: 50px 0px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    background: linear-gradient(-45deg, #5d4ad8, #4738a6, #261e59, #3D3959); 
-	background-size: 400% 400%;
-	animation: gradientPerfil 10s ease infinite;
-}
-
-.divPerfil {
-    width: 100%;
-}
-
-.desenhoPerfil {
-    width: 100%;
-    max-width: 400px;
-    
-    display: block;
-    margin: auto;
-}
-
-.divTextPerfil {
-    color: var(--offWhite);
-}
-
-.divSocialMidias {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 10px;
-}
-
-.iconRedes {
-    width: clamp(30px, 8vw, 45px);
-}
-
-.divTextPerfil h1 {
-    padding-top: 5px;
-    text-shadow: 2px 2px 5px black;
-    font-size: clamp(80px, 22vw, 150px);
-    /*CLAMP(VALOR MINIMO, VALOR DESEJADO, VALOR MAXIMO*/
-}
-
-.divTextPerfil p {
-    text-shadow: 1px 2px 3px black;
-    font-family: 'Made Tommy';
-    font-size: clamp(15px, 5vw, 30px);
-}
-
-
-
-
-
-
-/*CORPO DA PAGINA*/
-.section {
-    background-color: var(--offWhite);
 }
 
 section h2 {
@@ -195,42 +68,16 @@ section h2 {
     font-size: clamp(30px, 12vw, 100px);
 }
 
-.sectionSobre p {
-    color: var(--offBlack);
-    padding: 5px;
-    line-height: 15px;
-    text-align: justify;
-
-    display: block;
-    margin: auto;
-    width: clamp(200px, 80vw, 500px );
+main {
+    background-color: var(--offWhite);
+    padding: 30px 0px;
 }
 
-.sobreImg {
-    display: block;
-    margin: auto;
-    width: clamp(200px, 80vw, 500px );
+main h2 {
+    padding-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
-
-
-
-
-
-
-
-/*ANIMAÇÕES*/
-@keyframes gradientPerfil {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+main p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
 }

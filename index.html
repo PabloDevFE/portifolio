@@ -2,80 +2,133 @@
 <html lang="Pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifólio - Pablo Henrique</title>
-    <link rel="stylesheet" href="src/style/style.css"/>
-    <link rel="stylesheet" href="src/style/mq.css"/>
+
+    <link rel="stylesheet" href="src/style/style.css" />
+    <link rel="stylesheet" href="src/style/mq.css" />
+    <link rel="stylesheet" href="src/style/components/header.css" />
+    <link rel="stylesheet" href="src/style/components/perfilSection.css" />
+    <link rel="stylesheet" href="src/style/components/sobreSection.css" />
+    <link rel="stylesheet" href="src/style/components/skillsSection.css" />
   </head>
   <body>
-
     <header class="header">
-
       <div>
-        <img src="src/midias/logo-header-b.svg" class="headerLogo"/>
+        <a href="#home"
+          ><img src="src/midias/logo-header-b.svg" class="headerLogo"
+        /></a>
       </div>
 
       <nav class="headerNav">
-        <a href="#" class="navIcon">SOBRE</a>
-        <a href="#" class="navIcon">SKILLS</a>
-        <a href="#" class="navIcon">PROJETOS</a>
-        <a href="#" class="navIcon">CONTATOS</a>
+        <a href="#sobre" class="navIcon">SOBRE</a>
+        <a href="#skills" class="navIcon">SKILLS</a>
+        <a href="#projetos" class="navIcon">PROJETOS</a>
+        <a href="#contatos" class="navIcon">CONTATOS</a>
       </nav>
 
       <div class="menuMobile">
-          <a href="#"><img src="src/midias/icons8-hamburger-menu.svg" alt="" class="menuImg"></a>
+        <a href="#"
+          ><img
+            src="src/midias/icons8-hamburger-menu.svg"
+            alt=""
+            class="menuImg"
+        /></a>
       </div>
-    </header> <!--header-->
+    </header>
 
-    <div class="menu">
-        <a href="#" class="navIconSmall">SOBRE</a>
-        <a href="#" class="navIconSmall">SKILLS</a>
-        <a href="#" class="navIconSmall">PROJETOS</a>
-        <a href="#" class="navIconSmall">CONTATOS</a>
-    </div> <!--MENU PARA MOBILE-->
-
-    <section class="sectionPerfil">
-
-        <div class="divPerfil">
-          <img src="src/midias/perfil-simple.png" alt="Imagem de perfil" class="desenhoPerfil">
-        </div>
-
-        <div class="divTextPerfil">
-          <div class="divSocialMidias">
-            <a href="https://github.com/pablodevfe" target="_blank"><img src="src/midias/icons8-github.svg" alt="Github" class="iconRedes"></a>
-            <a href="https://www.instagram.com/pablo_dev01/" target="_blank"><img src="src/midias/icons8-instagram.svg" alt="Instagram" class="iconRedes"></a>
-            <a href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/" target="_blank"><img src="src/midias/icons8-linkedin.svg" alt="Linkedin" class="iconRedes"></a>
-          </div>
-          <h1>Dev Web</h1>
-          <p>React, JavaScript, HTML, CSS...</p>
-        </div>
-
-    </section><!--sectionPerfil-->
+    <div class="menu"> <!--MENU PARA MOBILE-->
+      <a href="#sobre" class="navIcon">SOBRE</a>
+      <a href="#skills" class="navIcon">SKILLS</a>
+      <a href="#projetos" class="navIcon">PROJETOS</a>
+      <a href="#contatos" class="navIcon">CONTATOS</a>
+    </div>
     
 
+    <section class="sectionPerfil" id="home">
+      <div class="divPerfil">
+        <img
+          src="src/midias/perfil-simple.png"
+          alt="Imagem de perfil"
+          class="desenhoPerfil"
+        />
+      </div>
+
+      <div class="divTextPerfil">
+        <div class="divSocialMidias">
+          <a href="https://github.com/pablodevfe" target="_blank"
+            ><img
+              src="src/midias/icons8-github.svg"
+              alt="Github"
+              class="iconRedes"
+          /></a>
+          <a href="https://www.instagram.com/pablo_dev01/" target="_blank"
+            ><img
+              src="src/midias/icons8-instagram.svg"
+              alt="Instagram"
+              class="iconRedes"
+          /></a>
+          <a
+            href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/"
+            target="_blank"
+            ><img
+              src="src/midias/icons8-linkedin.svg"
+              alt="Linkedin"
+              class="iconRedes"
+          /></a>
+        </div>
+        <h1>Dev Web</h1>
+        <p>React, JavaScript, HTML, CSS...</p>
+      </div>
+    </section>
+
     <main>
-
-      <section class="section sectionSobre">
+      <section class="sectionSobre" id="sobre">
         <h2>SOBRE MIM</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique esse animi vero, in recusandae unde, quaerat exercitationem expedita aut cumque possimus, assumenda ducimus repudiandae maxime sint? Voluptates, quam ullam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea obcaecati placeat eius at quasi ut, corrupti voluptatem veniam minus officia aperiam laboriosam assumenda quis, asperiores et dolores provident eos consequatur.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ducimus in ab, beatae esse quo quae quibusdam, similique eaque excepturi odio reiciendis voluptatem sed illo modi laudantium, temporibus praesentium maxime?</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est similique
+          esse animi vero, in recusandae unde, quaerat exercitationem expedita
+          aut cumque possimus, assumenda ducimus repudiandae maxime sint?
+          Voluptates, quam ullam! Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Ea obcaecati placeat eius at quasi ut, corrupti
+          voluptatem veniam minus officia aperiam laboriosam assumenda quis,
+          asperiores et dolores provident eos consequatur.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+          ducimus in ab, beatae esse quo quae quibusdam, similique eaque
+          excepturi odio reiciendis voluptatem sed illo modi laudantium,
+          temporibus praesentium maxime?
+        </p>
 
-        <img src="src/midias/img-perfil-branco.png" alt="" class="sobreImg">
+        <img src="src/midias/img-perfil-branco.png" alt="" class="sobreImg" />
       </section>
-      <hr>
-      <section class="section">
+
+      <section class="sectionSkills" id="skills">
         <h2>SKILLS</h2>
-      </section>
-      <hr>
-      <section class="section">
-        <h2>PROJETOS</h2>
-      </section> 
 
+        <div class="gridContainer">
+          <div class="cardSkill js">
+            <img src="src/midias/logo-js.png" alt="" />
+          </div>
+          <div class="cardSkill html">
+            <img src="src/midias/logo-html.png" alt="" />
+          </div>
+          <div class="cardSkill css">
+            <img src="src/midias/logo-css.png" alt="" />
+          </div>
+          <div class="cardSkill react">
+            <img src="src/midias/logo-react.png" alt="" />
+          </div>
+        </div>
+      </section>
     </main>
 
+    <section>
+      <h2>PROJETOS</h2>
+    </section>
 
-
-    <footer>
+    <footer id="contatos">
       <h2>CONTATOS</h2>
     </footer>
   </body>
