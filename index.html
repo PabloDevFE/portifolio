@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="src/style/components/perfilSection.css" />
     <link rel="stylesheet" href="src/style/components/sobreSection.css" />
     <link rel="stylesheet" href="src/style/components/skillsSection.css" />
+    <link rel="stylesheet" href="src/style/components/projetosSection.css" />
   </head>
   <body>
     <header class="header">
@@ -37,13 +38,13 @@
       </div>
     </header>
 
-    <div class="menu"> <!--MENU PARA MOBILE-->
+    <div class="menu">
+      <!--MENU PARA MOBILE-->
       <a href="#sobre" class="navIcon">SOBRE</a>
       <a href="#skills" class="navIcon">SKILLS</a>
       <a href="#projetos" class="navIcon">PROJETOS</a>
       <a href="#contatos" class="navIcon">CONTATOS</a>
     </div>
-    
 
     <section class="sectionPerfil" id="home">
       <div class="divPerfil">
@@ -109,27 +110,52 @@
 
         <div class="gridContainer">
           <div class="cardSkill js">
-            <img src="src/midias/logo-js.png" alt="" />
+            <abbr title="JavaScript">
+              <img src="src/midias/logo-js.png" alt="" />
+            </abbr>
           </div>
           <div class="cardSkill html">
-            <img src="src/midias/logo-html.png" alt="" />
+            <abbr title="HTML">
+              <img src="src/midias/logo-html.png" alt="" />
+            </abbr>
           </div>
           <div class="cardSkill css">
-            <img src="src/midias/logo-css.png" alt="" />
+            <abbr title="CSS">
+              <img src="src/midias/logo-css.png" alt="" />
+            </abbr>
           </div>
           <div class="cardSkill react">
-            <img src="src/midias/logo-react.png" alt="" />
+            <abbr title="React Js">
+              <img src="src/midias/logo-react.png" alt="" />
+            </abbr>
           </div>
         </div>
       </section>
     </main>
 
-    <section id="projetos">
+    <section class="sectionProjetos" id="projetos">
       <h2>PROJETOS</h2>
+      <span class="instrucoes"><p>*clique nos cards*</p></span>
+      <div class="containerProjetos">
+        <div class="cardProjeto">
+          <h3>Nome do projeto</h3>
+
+          Foto
+
+          <div class="cardExpansivo">
+            Explicação
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <footer id="contatos">
       <h2>CONTATOS</h2>
     </footer>
+
+
+
+    <script src="src/scripts/index.js"></script>
   </body>
 </html>

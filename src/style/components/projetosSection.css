@@ -1,0 +1,30 @@
+:root {
+    --offBlack: #161a1c;
+    --offWhite: #f2f2f2;
+    --blue: #0064cf;
+    --purple: #5d4ad8;
+    --orange: #ff8554;
+    --pink: #f5c3c6;
+    --black: #000;
+    --white: #fff;
+}
+
+
+.sectionProjetos {
+    background-color: var(--orange);
+}
+
+.sectionProjetos h2 {
+    color: var(--offWhite);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.637);
+}
+
+.instrucoes p {
+    text-align: center;
+    font-family: 'Made Tommy';
+    text-align: center;
+    color: #f2f2f2;
+}
+
+
+  

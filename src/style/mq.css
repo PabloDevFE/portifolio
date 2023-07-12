@@ -1,0 +1,22 @@
+@media (min-width: 1000px) {
+    abbr {
+        position: relative;
+      }
+      
+      abbr:hover::after {
+        position: absolute;
+        bottom: 100%;
+        left: 100%;
+        display: block;
+        padding: 10px;
+        background: var(--purple);
+        content: attr(title);
+        font-family: 'Made Tommy';
+        color: var(--offWhite);
+        border-radius: 10px;
+        width: 100px;
+        text-align: center;
+        letter-spacing: 1px;
+      }
+      
+}

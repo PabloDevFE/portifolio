@@ -1,37 +1,37 @@
 :root {
-    --offBlack: #161a1c;
-    --offWhite: #f2f2f2;
-    --blue: #0064cf;
-    --purple: #5d4ad8;
-    --orange: #ff8554;
-    --pink: #f5c3c6;
-    --black: #000;
-    --white: #fff;
+  --offBlack: #161a1c;
+  --offWhite: #f2f2f2;
+  --blue: #0064cf;
+  --purple: #5d4ad8;
+  --orange: #ff8554;
+  --pink: #f5c3c6;
+  --black: #000;
+  --white: #fff;
 }
 
 .sectionSkills {
-    background-color: var(--offWhite);
+  background-color: var(--offWhite);
 }
 
 .sectionSkills h2 {
-
 }
 
 .gridContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    gap: 40px 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  gap: 40px 10px;
 }
 
 .cardSkill {
-    border: 3px solid black;
-    border-radius: 15px;
-    box-shadow: 3px 3px 0px rgb(0, 0, 0);
+  border: 3px solid black;
+  border-radius: 15px;
+  box-shadow: 3px 3px 0px rgb(0, 0, 0);
 
-    padding: 10px;
+  padding: 10px;
 }
 
-.cardSkill img{
-    width: clamp(100px, 20vw, 150px);
+.cardSkill img {
+  width: clamp(100px, 20vw, 150px);
 }
+
