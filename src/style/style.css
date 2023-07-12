@@ -1,83 +1,79 @@
 @font-face {
-    font-family: 'Another Tag';
-    src: url(../fonts/aAnotherTag.ttf) format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'Gameshow';
-    src: url(../fonts/Gameshow.ttf) format('truetype');
-  }
-  
-  @font-face {
-    font-family: 'Made Tommy';
-    src: url(../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) format('opentype');
-  }
+  font-family: "Another Tag";
+  src: url(../fonts/aAnotherTag.ttf) format("truetype");
+}
 
 @font-face {
-    font-family: 'Secret';
-    src: url(../fonts/SECRETODEMOREGULAR.TTF) format('truetype');
+  font-family: "Gameshow";
+  src: url(../fonts/Gameshow.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Made Tommy";
+  src: url(../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Secret";
+  src: url(../fonts/SECRETODEMOREGULAR.TTF) format("truetype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+  height: 100vh;
 }
-
-
 
 :root {
-    --offBlack: #161a1c;
-    --offWhite: #f2f2f2;
-    --blue: #0064cf;
-    --purple: #5d4ad8;
-    --orange: #ff8554;
-    --pink: #f5c3c6;
-    --black: #000;
-    --white: #fff;
+  --offBlack: #161a1c;
+  --offWhite: #f2f2f2;
+  --blue: #0064cf;
+  --purple: #5d4ad8;
+  --orange: #ff8554;
+  --pink: #f5c3c6;
+  --black: #000;
+  --white: #fff;
 }
-
-
 
 .hidden {
-    display: none;
+  display: none;
 }
 
-h1, h2 {
-    font-family: 'Secret';
+h1,
+h2 {
+  font-family: "Secret";
 }
 
 p {
-    font-family: 'Made Tommy';
+  font-family: "Made Tommy";
 }
 
 section h2 {
-    padding: 40px 0px 10px 0px;
-    text-align: center;
-    color: var(--offBlack);
-    font-size: clamp(30px, 12vw, 100px);
+  padding: 40px 0px 10px 0px;
+  text-align: center;
+  color: var(--offBlack);
+  font-size: clamp(30px, 12vw, 100px);
 }
 
 main {
-    background-color: var(--offWhite);
-    padding: 30px 0px;
+  background-color: var(--offWhite);
+  padding: 30px 0px;
 }
 
 main h2 {
-    padding-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 main p {
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
 }
