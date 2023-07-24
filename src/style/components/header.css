@@ -50,7 +50,7 @@
 
 .menu {
   /*MENU PARA DISPOSITIVOS MOBILE*/
-
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -58,7 +58,7 @@
   gap: 10px;
   top: 60px;
   right: 0;
-  transition: 0.8s;
+  transition: 1s;
 
   width: 200px;
   height: 300px;
