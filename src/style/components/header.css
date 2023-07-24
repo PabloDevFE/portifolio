@@ -25,8 +25,8 @@
 }
 
 .headerLogo {
-  width: 120px;
-  height: 40px;
+  width: clamp(80px, 8vw, 120px);
+  height: clamp(30px, 4vw, 45px);
 }
 
 .headerNav {
@@ -38,7 +38,7 @@
 .headerNav a {
   font-family: "Gameshow";
   color: #fff;
-  font-size: 35px;
+  font-size: clamp(20px, 4vw, 40px);
 }
 
 .navIcon:hover {

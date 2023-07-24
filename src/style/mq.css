@@ -1,4 +1,4 @@
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   .menu {
     display: flex;
   }
@@ -6,9 +6,10 @@
   .headerNav {
     display: none;
   }
+
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .menu {
     display: none;
   }
@@ -16,4 +17,8 @@
   .headerNav {
     display: flex;
   }
+
+  .menuImg {
+    display: none;
+    }
 }
