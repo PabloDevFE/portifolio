@@ -17,4 +17,9 @@
   .menuImg {
     display: none;
     }
+
+
+  .sectionPerfil {
+    flex-direction: row;
+  }
 }
