@@ -83,6 +83,7 @@ p {
 
 .navigation {
   gap: 1.5em;
+  z-index: 2;
 }
 
 .navigation > a {
