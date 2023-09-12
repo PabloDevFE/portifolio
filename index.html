@@ -5,32 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifólio</title>
     <link rel="stylesheet" href="src/style/style.css" />
+    <link rel="stylesheet" href="src/style/mq.css">
+
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Sobre</li>
-          <li>Skills</li>
-          <li>Projetos</li>
-          <li>Contato</li>
-        </ul>
-      </nav>
-    </header>
+
+    <header class="header" id="header">
+      <button class="btnHeader" onclick="toggleSidebar()">
+        <i class="fa-solid fa-bars iconBranco"></i>
+      </button>
+      
+        <div class="logo">
+          <img src="src/images/logo-header.svg" alt="logo PABLO">
+        </div>
+
+        <nav class="navigation" id="navigation">
+          <button class="btnHeader" onclick="toggleSidebar()">
+            <i class="fa-solid fa-x iconBranco"></i>
+          </button>
+          <a href="">HOME</a>
+          <a href="">SOBRE</a>
+          <a href="">SKILLS</a>
+          <a href="" class="navActive">PROJETOS</a>
+          <a href="">CONTATOS</a>
+        </nav>
+    </header> 
 
     <main>
       <section class="home">
-        <img src="src/images/perfil-simple.png" alt="Foto de perfil" />
+        <img src="src/images/perfil-.png" alt="Foto de perfil" />
 
         <div class="homeText">
           <div class="socialMidias">
             <ul>
-              <li>Insta</li>
-              <li>Git</li>
-              <li>Linked</li>
+              <li><i class="fa-brands fa-instagram"></i></li>
+              <!--para mudar a cor é só mudar o color no css-->
+              <li><i class="fa-brands fa-github"></i></li>
+              <li><i class="fa-brands fa-linkedin"></i></li>
             </ul>
-          </div><!--socialMidias-->
+          </div>
+          <!--socialMidias-->
 
           <div>
             <h1>Desenvolvedor web</h1>
@@ -40,16 +62,21 @@
             </p>
           </div>
         </div>
-      </section><!--home-->
+      </section>
+      <!--home-->
 
       <section class="sobre">
         <div class="sobreText">
           <h1>Sobre mim</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nam quibusdam nobis provident iste laborum expedita dignissimos, quia voluptas deleniti similique ad nisi atque ullam natus facilis libero sapiente. Unde!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nam
+            quibusdam nobis provident iste laborum expedita dignissimos, quia
+            voluptas deleniti similique ad nisi atque ullam natus facilis libero
+            sapiente. Unde!
           </p>
         </div>
-      </section><!--sobre-->
+      </section>
+      <!--sobre-->
 
       <section class="skills">
         <h1>Skills</h1>
@@ -61,28 +88,35 @@
             <li>CSS</li>
           </ul>
         </div>
-      </section><!--skills-->
+      </section>
+      <!--skills-->
 
       <section class="projetos">
         <h1>Projetos</h1>
 
-        <aside><!--ESTA É A ESTRUTURA COMPLETA DO CARD DE PROJETOS-->
+        <aside>
+          <!--ESTA É A ESTRUTURA COMPLETA DO CARD DE PROJETOS-->
           <div class="textProjeto">
             <h1>Titulo</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni veritatis repellat cupiditate dolorum assumenda ullam non cum.</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              veritatis repellat cupiditate dolorum assumenda ullam non cum.
+            </p>
           </div>
           <div class="cardProjeto">
-            <img src="" alt="">
+            <img src="" alt="" />
             <div>
               <span><a href="">Visite o site</a></span>
               <span><a href="">Visite o repositório</a></span>
             </div>
           </div>
         </aside>
-
-      </section> <!--projetos-->
+      </section>
+      <!--projetos-->
     </main>
 
     <footer></footer>
+
+    <script src="src/scripts/index.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+/*======================================configs gerais===========================================================*/
 @font-face {
   font-family: "Another Tag";
   src: url(../fonts/aAnotherTag.ttf) format("truetype");
@@ -37,12 +38,17 @@ body {
 :root {
   --offBlack: #161a1c;
   --offWhite: #f2f2f2;
+  --gray: #424242;
   --blue: #0064cf;
   --purple: #5d4ad8;
   --orange: #ff8554;
   --pink: #f5c3c6;
   --black: #000;
   --white: #fff;
+
+  --fontTitulo: "Secret", cursive;
+  --fontText: "Made Tommy", sans-serif;
+  --fontDestaque: "Gameshow", sans-serif;
 }
 
 .hidden {
@@ -51,31 +57,74 @@ body {
 
 h1,
 h2 {
-  font-family: "Secret";
+  font-family: var(--fontTitulo);
 }
 
 p {
-  font-family: "Made Tommy";
+  font-family: var(--fontText);
 }
 
-section h2 {
-  padding: 40px 0px 10px 0px;
-  text-align: center;
-  color: var(--offBlack);
-  font-size: clamp(30px, 12vw, 100px);
+
+/*======================================header===========================================================*/
+.header {
+  background-color: var(--black);
+  color: var(--white);
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 3.5em;
 }
 
-main {
-  background-color: var(--offWhite);
-  padding: 30px 0px;
+.navigation,
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
-main h2 {
-  padding-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+.navigation {
+  gap: 1.5em;
 }
 
-main p {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.274);
+.navigation > a {
+  color: var(--white);
+  text-decoration: none;
+  font-family: var(--fontDestaque);
+  font-size: 1.8rem;
+  transition: 1s;
+  position: relative;
 }
 
+
+.navActive {
+  background-color: var(--gray);
+  padding: 1px 3px;
+  border-radius: 10px 0px;
+}
+
+.navActive::before {
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #fff;
+
+  position: absolute;
+  bottom:0;
+}
+
+.logo img {
+  filter: invert(1);
+  width: 100px;
+}
+
+.btnHeader {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.iconBranco {
+  font-size: 1.1rem;
+  color: var(--white);
+}
