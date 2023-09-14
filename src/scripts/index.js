@@ -5,6 +5,7 @@ let btnOpen = document.querySelector("#btnHeaderHamburguer");
 let btnClose = document.querySelector("#btnHeaderClose");
 let showSidebar = false;
 
+//abre o menu
 function toggleSidebar() {
   showSidebar = !showSidebar;
   if (showSidebar) {
@@ -25,6 +26,7 @@ function closeSidebar() {
   }
 }
 
+//Função para fazer o menu fechar caso a tela seja redimensionada
 window.addEventListener("resize", function (event) {
   if (window.innerWidth > 768 && showSidebar) {
     showSidebar = true;
@@ -33,6 +35,7 @@ window.addEventListener("resize", function (event) {
   }
 });
 
+//adiciona os leitores de eventos, tanto para fechar, quanto para abrir o menu
 btnOpen.addEventListener("click", () => {
   toggleSidebar();
   btnOpen.style.visibility = "hidden";
