@@ -65,13 +65,18 @@ p {
 }
 
 
-/*======================================header===========================================================*/
+/*=============================================header====================================================*/
 .header {
   background-color: var(--black);
   color: var(--white);
   justify-content: space-between;
   padding: 0 5%;
   height: 3.5em;
+
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
 }
 
 .navigation,
@@ -128,4 +133,11 @@ p {
 .iconBranco {
   font-size: 1.1rem;
   color: var(--white);
+}
+
+/*=============================================main====================================================*/
+  /*section roxa*/
+.imgPerfil {
+  display: block;
+  width: 200px;
 }

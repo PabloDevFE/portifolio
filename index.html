@@ -19,7 +19,7 @@
   <body>
 
     <header class="header" id="header">
-      <button class="btnHeader" onclick="toggleSidebar()">
+      <button class="btnHeader" id="btnHeaderHamburguer">
         <i class="fa-solid fa-bars iconBranco"></i>
       </button>
 
@@ -28,20 +28,20 @@
         </div>
 
         <nav class="navigation" id="navigation">
-          <button class="btnHeader" onclick="toggleSidebar()">
+          <button class="btnHeader" id="btnHeaderClose">
             <i class="fa-solid fa-x iconBranco"></i>
           </button>
-          <a href="">HOME</a>
-          <a href="">SOBRE</a>
-          <a href="">SKILLS</a>
-          <a href="" class="navActive">PROJETOS</a>
-          <a href="">CONTATOS</a>
+          <a href="" id="btnHome" class="navActive">HOME</a>
+          <a href="" id="btnSobre">SOBRE</a>
+          <a href="" id="btnSkills">SKILLS</a>
+          <a href="" id="btnProjetos">PROJETOS</a>
+          <a href="" id="btnContatos">CONTATOS</a>
         </nav>
     </header> 
 
-    <main class="main" id="main" onclick="closeSidebar()">
-      <section class="home">
-        <img src="src/images/perfil-simple.png" alt="Foto de perfil" />
+    <main class="main" id="main">
+      <section class="home" id="home">
+        <img src="src/images/perfil-simple.png" alt="Foto de perfil" class="imgPerfil"/>
 
         <div class="homeText">
           <div class="socialMidias">
@@ -65,7 +65,7 @@
       </section>
       <!--home-->
 
-      <section class="sobre">
+      <section class="sobre" id="sobre">
         <div class="sobreText">
           <h1>Sobre mim</h1>
           <p>
@@ -78,7 +78,7 @@
       </section>
       <!--sobre-->
 
-      <section class="skills">
+      <section class="skills" id="skills">
         <h1>Skills</h1>
         <div>
           <ul>
@@ -91,7 +91,7 @@
       </section>
       <!--skills-->
 
-      <section class="projetos">
+      <section class="projetos" id="projetos">
         <h1>Projetos</h1>
 
         <aside>
@@ -115,7 +115,7 @@
       <!--projetos-->
     </main>
 
-    <footer></footer>
+    <footer id="contato"></footer>
 
     <script src="src/scripts/index.js"></script>
   </body>

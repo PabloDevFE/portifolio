@@ -4,21 +4,23 @@
   }
 
   .navigation {
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     top: 0;
+    left: 0;
     height: 100vh;
-    width: clamp(200px, 40vw, 500px);
+    width: 100vw;
+    height: 100vh;
     padding: 1.3em;
     gap: 3em;
-
-    background-color: var(--offBlack);
+    padding-top: 7em;
+    background-color: rgba(0, 0, 0, 0.233);
     margin-left: -100vw;
     animation-duration: 0.7s;
   }
 
   @keyframes showMenu {
     from {margin-left: -100vw;}
-    to {margin-left: -5vw;}
+    to {margin-left: 0vw;}
   }
 }
