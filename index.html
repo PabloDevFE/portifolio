@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifólio</title>
     <link rel="stylesheet" href="src/style/style.css" />
-    <link rel="stylesheet" href="src/style/mq.css">
+    <link rel="stylesheet" href="src/style/mq.css" />
 
     <!--Font Awesome-->
     <link
@@ -17,53 +17,52 @@
     />
   </head>
   <body>
-
     <header class="header" id="header">
       <button class="btnHeader" id="btnHeaderHamburguer">
         <i class="fa-solid fa-bars iconBranco"></i>
       </button>
 
-        <div class="logo">
-          <img src="src/images/logo-header.svg" alt="logo PABLO">
-        </div>
+      <div class="logo">
+        <img src="src/images/logo-header.svg" alt="logo PABLO" />
+      </div>
 
-        <nav class="navigation" id="navigation">
-          <button class="btnHeader" id="btnHeaderClose">
-            <i class="fa-solid fa-x iconBranco"></i>
-          </button>
-          <a href="" id="btnHome" class="navActive">HOME</a>
-          <a href="" id="btnSobre">SOBRE</a>
-          <a href="" id="btnSkills">SKILLS</a>
-          <a href="" id="btnProjetos">PROJETOS</a>
-          <a href="" id="btnContatos">CONTATOS</a>
-        </nav>
-    </header> 
+      <nav class="navigation" id="navigation">
+        <button class="btnHeader" id="btnHeaderClose">
+          <i class="fa-solid fa-x iconBranco"></i>
+        </button>
+        <a href="#home" id="btnHome" class="navActive">HOME</a>
+        <a href="#sobre" id="btnSobre">SOBRE</a>
+        <a href="#skills" id="btnSkills">SKILLS</a>
+        <a href="#projetos" id="btnProjetos">PROJETOS</a>
+        <a href="#contatos" id="btnContatos">CONTATOS</a>
+      </nav>
+    </header>
 
     <main class="main" id="main">
       <section class="home" id="home">
-        <img src="src/images/perfil-simple.png" alt="Foto de perfil" class="imgPerfil"/>
+        <img
+          src="src/images/perfil-simple.png"
+          alt="Foto de perfil"
+          class="imgPerfil"
+        />
 
         <div class="homeText">
           <div class="socialMidias">
             <ul>
-              <li><i class="fa-brands fa-instagram"></i></li>
+              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
               <!--para mudar a cor é só mudar o color no css-->
-              <li><i class="fa-brands fa-github"></i></li>
-              <li><i class="fa-brands fa-linkedin"></i></li>
+              <li><a href=""><i class="fa-brands fa-github"></i></a></li>
+              <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
             </ul>
           </div>
-          <!--socialMidias-->
 
-          <div>
-            <h1>Desenvolvedor web</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
-              commodi?
-            </p>
-          </div>
+          <h1>Desenvolvedor web</h1>
+          <p>
+            Programador Front-end com experiência em: JavaScript, HTML, CSS, React, Bulma, entre outras tecnologias...
+          </p>
         </div>
-      </section>
-      <!--home-->
+      </section><!--home-->
+      
 
       <section class="sobre" id="sobre">
         <div class="sobreText">
