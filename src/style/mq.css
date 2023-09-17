@@ -27,6 +27,10 @@
   }
 
   /*====================================main====================================*/
+  .main h1 {
+    font-size: clamp(40px, 12vw, 60px);
+  }
+
     /*section roxa*/
   .homeText {
     width: 80%;
@@ -34,7 +38,6 @@
 
   .homeText h1 {
     text-align: center;
-    font-size: clamp(40px, 10vw, 60px);
   }
   
   .homeText p {
@@ -50,4 +53,22 @@
   .socialMidias ul {
     justify-content: space-around;
   }
+
+  /*sobre*/
+  .sobre {
+    flex-direction: row-reverse;
+  }
+
+  .sobreText {
+    display: block;
+    margin: auto;
+    width: 90%;
+  }
+
+  /*skills*/
+  .skills ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
 }
+

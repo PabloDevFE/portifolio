@@ -1,4 +1,4 @@
-/*======================================configs gerais===========================================================*/
+/*======================================configs gerais================================================*/
 @font-face {
   font-family: "Another Tag";
   src: url(../fonts/aAnotherTag.ttf) format("truetype");
@@ -28,7 +28,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 80px;
 }
 
 body {
@@ -49,10 +49,16 @@ body {
   --fontTitulo: "Secret", cursive;
   --fontText: "Made Tommy", sans-serif;
   --fontDestaque: "Gameshow", sans-serif;
+
+  --cardSkill: clamp(40px, 20vw, 60px)
 }
 
 .hidden {
   display: none;
+}
+
+body {
+  background-color: var(--offWhite);
 }
 
 h1,
@@ -134,13 +140,21 @@ p {
 }
 
 /*=============================================main====================================================*/
-  /*section roxa*/
+main h1 {
+  text-shadow: 3px 3px 3px #00000073;
+  font-size: clamp(40px, 6vw, 130px);
+}
+
+main section{
+  padding: 5em 1em;
+}
+
+  /*home*/
 .home {
   background-image: linear-gradient(45deg, #6752ee, #2a2163);
   background-size: 400%;
   animation: infinite 9s linear bgMoviment;
   color: #fff;
-  padding: 4em 1em;
 
   display: flex;
   flex-wrap: wrap;
@@ -189,12 +203,65 @@ p {
   transition: .4s;
 }
 
-.homeText h1 {
-  text-shadow: 3px 3px 3px #00000073;
-  font-size: clamp(40px, 6vw, 130px);
-}
-
 .homeText p {
   text-align: justify;
   text-shadow: 2px 2px 1px #00000050;
+  font-size: 1.2rem;
+}
+
+  /*sobre*/
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;  
+}
+
+.sobreText {
+  width: clamp(300px, 50vw, 900px);
+}
+
+.sobreText h1 {
+  text-align: center;
+}
+
+.sobreText p {
+  text-shadow: 2px 2px 1px #00000050;
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.imgSobre {
+  min-width: 200px;
+  width: 20%;
+}
+
+  /*skills*/
+.skills h1 {
+  text-align: center;
+}
+
+.skills ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  list-style: none;
+  text-align: center;
+  font-size: clamp(35px, 7vw, 40px);;
+}
+
+.skills > ul > li > i {
+  width: var(--cardSkill);
+  height: var(--cardSkill);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+  color: var(--purple);
+  border: 2px solid var(--offBlack);
+  background-color: #161a1c13;
+  text-shadow: 0px 0px 5px #0000005b;
+  border-radius: 0px 20px;
 }
