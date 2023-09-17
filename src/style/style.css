@@ -159,11 +159,16 @@ p {
 }
 
 .imgPerfil {
-  width: clamp(280px, 40vw, 650px);
+  filter: drop-shadow(15px 15px 6px #00000073);
+  width: clamp(280px, 40vw, 700px);
 }
 
 .homeText {
-  max-width: 50%;
+  width: clamp(100px, 50vw, 900px);
+}
+
+.socialMidias {
+  margin-bottom: 2em;
 }
 
 .socialMidias ul{
@@ -171,22 +176,25 @@ p {
   display: flex;
   justify-content: flex-start;
   gap: 2em;
-  font-size: clamp(20px, 3vw, 40px);
+  font-size: clamp(30px, 3vw, 40px);
 }
 
 .socialMidias a {
   color: #fff;
+  text-shadow: 3px 3px 3px #00000073;
 }
 
 .socialMidias a:hover {
-  text-shadow: 0px 0px 10px #ffffff63;
+  text-shadow: 0px 0px 10px #ffffff9a;
   transition: .4s;
 }
 
 .homeText h1 {
-  font-size: clamp(30px, 7vw, 100px);
+  text-shadow: 3px 3px 3px #00000073;
+  font-size: clamp(40px, 6vw, 130px);
 }
 
 .homeText p {
-  max-width: 90%;
+  text-align: justify;
+  text-shadow: 2px 2px 1px #00000050;
 }

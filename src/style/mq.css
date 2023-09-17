@@ -28,4 +28,26 @@
 
   /*====================================main====================================*/
     /*section roxa*/
+  .homeText {
+    width: 80%;
+  }
+
+  .homeText h1 {
+    text-align: center;
+    font-size: clamp(40px, 10vw, 60px);
+  }
+  
+  .homeText p {
+    display: block;
+    margin: auto;
+    width: 90%;
+  }
+
+  .socialMidias {
+    margin-bottom: 2.5em;
+  }
+  
+  .socialMidias ul {
+    justify-content: space-around;
+  }
 }
