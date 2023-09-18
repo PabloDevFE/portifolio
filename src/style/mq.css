@@ -44,6 +44,7 @@
     display: block;
     margin: auto;
     width: 90%;
+    font-size: 1rem;
   }
 
   .socialMidias {
@@ -63,6 +64,10 @@
     display: block;
     margin: auto;
     width: 90%;
+  }
+
+  .sobreText p {
+    font-size: 1rem;
   }
 
   /*skills*/
