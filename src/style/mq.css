@@ -75,5 +75,24 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1em;
   }
+
+  /*projetos*/
+
+  .container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .projetosText {
+    width: 80%;
+  }
+
+  .projetosText h2 {
+    text-align: center;
+  }
+
+  .cardContainer {
+    width: 80%;
+  }
 }
 

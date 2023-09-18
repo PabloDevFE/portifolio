@@ -326,8 +326,42 @@ main section{
   text-align: center;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8em;
+  gap: 3em;
+}
+
+.start {
+  justify-content: start;
+  flex-direction: row-reverse;
+  text-align: left;
+}
+
+.end {
+  justify-content: end;
+  text-align: right;
+}
+
+.projetosText {
+  width: clamp(300px, 30%, 600px);
+  color: var(--offWhite);
+}
+
+.projetosText p {
+  text-shadow: 1px 1px 1px #0000004f;
+  font-size: 1.2rem;
+}
+
+.projetosText h2 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 1px #0000004f;
+}
+
 .cardContainer {
   border: 2px solid #000;
   display: flex;
   flex-direction: column;
+  width: clamp(300px, 50%, 900px);
 }
