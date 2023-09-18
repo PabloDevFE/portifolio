@@ -103,15 +103,16 @@ p {
   font-family: var(--fontDestaque);
   font-size: 1.8rem;
   position: relative;
+  transition: .4s;
 }
 
-.navActive {
+.navigation > a:hover {
   background-color: var(--gray);
   padding: 1px 3px;
   border-radius: 10px 0px;
 }
 
-.navActive::before {
+.navigation> a:hover::before {
   content: "";
   height: 2px;
   width: 70%;
@@ -119,7 +120,9 @@ p {
   transition: .8s;
   position: absolute;
   bottom:0;
+  transition: .4s;
 }
+
 
 .logo img {
   filter: invert(1);
@@ -153,7 +156,7 @@ main section{
 .home {
   background-image: linear-gradient(45deg, #6752ee, #2a2163);
   background-size: 400%;
-  animation: infinite 9s linear bgMoviment;
+  animation: infinite 10s bgMoviment linear;
   color: #fff;
 
   display: flex;
@@ -174,11 +177,11 @@ main section{
 
 .imgPerfil {
   filter: drop-shadow(15px 15px 6px #00000073);
-  width: clamp(280px, 40vw, 700px);
+  width: clamp(280px, 40vw, 600px);
 }
 
 .homeText {
-  width: clamp(100px, 50vw, 900px);
+  width: clamp(100px, 50vw, 700px);
 }
 
 .socialMidias {
@@ -227,7 +230,7 @@ main section{
 }
 
 .sobreText p {
-  text-shadow: 2px 2px 1px #00000050;
+  text-shadow: 1px 1px 1px #0000004f;
   font-size: 1.2rem;
   text-align: justify;
 }
@@ -247,10 +250,11 @@ main section{
   grid-template-columns: 1fr 1fr 1fr 1fr;
   list-style: none;
   text-align: center;
+  padding-top: 20px;
   font-size: clamp(35px, 7vw, 40px);;
 }
 
-.skills > ul > li > i {
+.skills > ul > li > abbr > i {
   width: var(--cardSkill);
   height: var(--cardSkill);
 
@@ -262,6 +266,56 @@ main section{
   color: var(--purple);
   border: 2px solid var(--offBlack);
   background-color: #161a1c13;
-  text-shadow: 0px 0px 5px #0000005b;
-  border-radius: 0px 20px;
+  text-shadow: 0px 0px 3px #0000005b;
+  border-radius: 5px 20px;
+  transition: .6s;
+  position: relative;
+}
+
+.skills > ul > li > abbr > i::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  background-color: var(--purple);
+}
+
+.skills > ul > li > abbr > i:hover::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  background-color: var(--orange);
+  left: auto;
+  right: 0;
+  transition: 1s; 
+  animation: upSize .6s linear;
+}
+
+.skills > ul > li > abbr> i:hover {
+  transform: scale(1.3);
+  border-radius: 20px 5px;
+  color: var(--orange);
+  background-color: var(--offBlack);
+}
+
+@keyframes upSize {
+  0% {
+    width: 70%;
+  }
+
+  50% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.projetos:active {
+  background-color: var(--orange);
+  transition: 3s;
 }
