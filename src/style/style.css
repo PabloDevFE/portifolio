@@ -50,7 +50,8 @@ body {
   --fontText: "Made Tommy", sans-serif;
   --fontDestaque: "Gameshow", sans-serif;
 
-  --cardSkill: clamp(40px, 20vw, 60px)
+  --cardSkill: clamp(40px, 20vw, 60px);
+  --cardProjeto: clamp(200px, 40vw, 600px);
 }
 
 .hidden {
@@ -82,7 +83,7 @@ p {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 2;
+  z-index: 100;
 }
 
 .navigation,
@@ -204,6 +205,7 @@ main section{
 .socialMidias a:hover {
   text-shadow: 0px 0px 10px #ffffff9a;
   transition: .4s;
+  font-size: 110%;
 }
 
 .homeText p {
@@ -331,6 +333,7 @@ main section{
   align-items: center;
   margin-bottom: 8em;
   gap: 3em;
+  padding: 2em;
 }
 
 .start {
@@ -344,9 +347,58 @@ main section{
   text-align: right;
 }
 
+.cardContainer {
+  background-color: var(--offBlack);
+  border: 2px solid #1100ff;
+  display: flex;
+  flex-direction: column;
+  width: var(--cardProjeto);
+  position: relative;
+
+  z-index: 20;
+}
+
+.end:hover .projetosText{
+  animation: slideRight 1s 20ms ease;
+  animation-fill-mode: forwards; /*faz a animação pausar no final*/
+}
+
+@keyframes slideRight {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: 101%;
+    background-color: #161a1c86;
+  }
+}
+
+.start:hover .projetosText{
+  animation: slideLeft 1s 20ms ease;
+  animation-fill-mode: forwards; /*faz a animação pausar no final*/
+}
+
+@keyframes slideLeft {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 101%;
+    background-color: #161a1c86;
+  }
+}
+
 .projetosText {
-  width: clamp(300px, 30%, 600px);
+  width: 100%;
+  height: 100%;
   color: var(--offWhite);
+  border: 2px solid red;
+  background-color: #fff;
+
+  position: absolute;
+  z-index: -1;
 }
 
 .projetosText p {
@@ -359,9 +411,12 @@ main section{
   text-shadow: 2px 2px 1px #0000004f;
 }
 
-.cardContainer {
-  border: 2px solid #000;
+
+.btnContainer {
   display: flex;
-  flex-direction: column;
-  width: clamp(300px, 50%, 900px);
+  justify-content: space-around;
+}
+
+.btnCard {
+  background-color: #fff;
 }
