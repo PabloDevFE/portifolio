@@ -1,2 +1,2 @@
-# portifolio
- Criando meu portifólio Front-end
+# portfólio
+ Criando meu portfólio Front-end
