@@ -126,7 +126,8 @@
   }
 
   .projetosText p {
-    width: 90%;
+    width: 100%;
+    font-size: .9rem;
     margin: auto;
     text-align: justify;
   }
