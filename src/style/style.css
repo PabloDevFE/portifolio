@@ -371,7 +371,7 @@ main section{
   display: none;
 } */
 
-.end:hover .projetosText{
+.end > .cardContainer:hover .projetosText{
   animation: slideRight 1s 20ms ease;
   animation-fill-mode: forwards; /*faz a animação pausar no final*/
 }
@@ -387,7 +387,7 @@ main section{
   }
 }
 
-.start:hover .projetosText{
+.start > .cardContainer:hover .projetosText{
   animation: slideLeft 1s 20ms ease;
   animation-fill-mode: forwards; /*faz a animação pausar no final*/
 }
