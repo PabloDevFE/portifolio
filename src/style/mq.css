@@ -28,15 +28,25 @@
 
   /*====================================main====================================*/
   .main h1 {
-    font-size: clamp(40px, 12vw, 60px);
+    font-size: clamp(40px, 15vw, 60px);
+  }
+
+  .main > section {
+    padding: 4em 0;
   }
 
     /*section roxa*/
+  .home {
+    padding: 2em .5em;
+  }
+  
   .homeText {
-    width: 80%;
+    width: 100%;
   }
 
   .homeText h1 {
+    width: 100%;
+    
     text-align: center;
   }
   
@@ -63,7 +73,7 @@
   .sobreText {
     display: block;
     margin: auto;
-    width: 90%;
+    width: 80%;
   }
 
   .sobreText p {
@@ -73,26 +83,63 @@
   /*skills*/
   .skills ul {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1em;
+    row-gap: 1.5em;
   }
 
   /*projetos*/
 
+  .projetos {
+    padding: 2em 0em;
+  }
+
   .container {
     flex-direction: column-reverse;
     justify-content: center;
-  }
-
-  .projetosText {
-    width: 80%;
-  }
-
-  .projetosText h2 {
-    text-align: center;
+    margin-bottom: 1em;
   }
 
   .cardContainer {
-    width: 80%;
+    width: 100%;
+
   }
+
+  .start > .cardContainer:hover .projetosText{
+    animation: none;
+  }
+
+  .end > .cardContainer:hover .projetosText{
+    animation: none;
+  }
+
+  .projetosText {
+    position: inherit;
+
+    background-color: var(--offBlack);
+    color: var(--offWhite);
+    height: auto;
+    border-bottom: 2px solid var(--offWhite);
+  }
+  
+  .projetosText h2 {
+    margin: auto;
+    display: block;
+  }
+
+  .projetosText p {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+  }
+
+  .btnContainer {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .btnCard {
+    width: 7em;
+    text-align: center;
+  }
+
 }
 

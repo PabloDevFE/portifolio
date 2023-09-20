@@ -51,7 +51,7 @@ body {
   --fontDestaque: "Gameshow", sans-serif;
 
   --cardSkill: clamp(40px, 20vw, 60px);
-  --cardProjeto: clamp(200px, 30vw, 600px);
+  --cardProjeto: clamp(350px, 40vw, 800px);
 }
 
 .hidden {
@@ -147,6 +147,7 @@ p {
 main h1 {
   text-shadow: 3px 3px 3px #00000073;
   font-size: clamp(40px, 6vw, 130px);
+  margin-bottom: 1.5rem;
 }
 
 main section{
@@ -156,8 +157,8 @@ main section{
   /*home*/
 .home {
   background-image: linear-gradient(45deg, #6752ee, #2a2163);
-  background-size: 400%;
-  animation: infinite 10s bgMoviment linear;
+  background-size: 200%;
+  animation: infinite 10s bgMoviment cubic-bezier(0.4, 0, 0.2, 1);
   color: #fff;
 
   display: flex;
@@ -348,28 +349,14 @@ main section{
 }
 
 .cardContainer {
-  background-color: var(--offBlack);
-  border: 2px solid #1100ff;
+  background-color: var(--offWhite);
+  padding: 1em;
   display: flex;
   flex-direction: column;
   width: var(--cardProjeto);
   position: relative;
   z-index: 20;
 }
-
-/* .cardContainer::before {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  color: #fff;
-  font-family: var(--fontTitulo);
-  content: "xmen";
-  backdrop-filter: blur(5px);
-}
-
-.cardContainer:hover::before {
-  display: none;
-} */
 
 .end > .cardContainer:hover .projetosText{
   animation: slideRight 1s 20ms ease;
@@ -382,8 +369,10 @@ main section{
   }
 
   to {
-    right: 101%;
+    right: 100%;
     background-color: #161a1c86;
+    color: #fff;
+    text-shadow: 2px 2px 1px #00000046;
   }
 }
 
@@ -398,39 +387,119 @@ main section{
   }
 
   to {
-    left: 101%;
+    left: 100%;
     background-color: #161a1c86;
+    color: #fff;
+    text-shadow: 2px 2px 1px #00000046;
   }
+}
+
+.end > .cardContainer {
+  box-shadow: 5px 5px 3px #00000050;
+}
+
+.start > .cardContainer {
+  box-shadow: -5px 5px 3px #00000050;
 }
 
 .projetosText {
   width: 100%;
   height: 100%;
-  color: var(--offWhite);
-  border: 2px solid red;
+  padding: 1em;
   background-color: transparent;
+  color: transparent;
 
   position: absolute;
-  z-index: -1;
+  top: 0;
+  right: 0;
+  z-index: -10;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.end .projetosText {
+  align-items: end;
+}
+
+.start .projetosText {
+  align-items: start;
 }
 
 .projetosText p {
-  text-shadow: 1px 1px 1px #0000004f;
   font-size: 1.2rem;
+  width: 70%;
 }
 
 .projetosText h2 {
-  font-size: 3rem;
+  font-family: var(--fontDestaque);
+  font-size: 5rem;
   text-shadow: 2px 2px 1px #0000004f;
 }
 
+.imgCard {
+  aspect-ratio: 4/3;
+}
+
+.tecList {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  padding-top: .5em;
+}
+
+.tecList i {
+  color: var(--offBlack);
+  text-shadow: 3px 3px 2px #0000002a;
+}
 
 .btnContainer {
   display: flex;
   justify-content: space-around;
-  background-color: var(--offBlack);
+  align-items: center;
+  padding: 1em 0 1em 0;
 }
 
 .btnCard {
-  background-color: #fff;
+  background-color: var(--offBlack);
+  width: 9em;
+  height: 3em;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+
+  border-radius: 10px 0px;
+  border: 2px solid var(--offBlack);
+  position: relative;
+}
+
+.btnCard:hover {
+  background-color: var(--offWhite);
+  border: 2px solid var(--offBlack);
+  transition: ease .6s;
+}
+
+.btnCard:hover a {
+  color: var(--offBlack);
+}
+
+.btnCard::before {
+  content: "";
+  width: 80%;
+  height: 2px;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  background: linear-gradient(90deg, rgba(93,74,216,1) 14%, rgba(0,100,207,1) 100%);
+}
+
+.btnCard a {
+  font-family: var(--fontText);
+  font-variant: small-caps;
+  color: #fff;
 }
