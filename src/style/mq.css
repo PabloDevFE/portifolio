@@ -95,12 +95,13 @@
   .container {
     flex-direction: column-reverse;
     justify-content: center;
+    padding: .5em;
     margin-bottom: 1em;
   }
 
   .cardContainer {
     width: 100%;
-
+    padding: 5px;
   }
 
   .start > .cardContainer:hover .projetosText{
@@ -135,11 +136,16 @@
   .btnContainer {
     flex-wrap: wrap;
     gap: 5px;
+    padding: 0 0;
   }
 
   .btnCard {
-    width: 7em;
+    width: 40%;
     text-align: center;
+  }
+
+  .tecList {
+    padding: .5em;
   }
 
 }

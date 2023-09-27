@@ -51,7 +51,7 @@ body {
   --fontDestaque: "Gameshow", sans-serif;
 
   --cardSkill: clamp(40px, 20vw, 60px);
-  --cardProjeto: clamp(350px, 40vw, 800px);
+  --cardProjeto: clamp(350px, 40vw, 700px);
 }
 
 .hidden {
@@ -146,7 +146,7 @@ p {
 /*=============================================main====================================================*/
 main h1 {
   text-shadow: 3px 3px 3px #00000073;
-  font-size: clamp(40px, 6vw, 130px);
+  font-size: clamp(40px, 6vw, 80px);
   margin-bottom: 1.5rem;
 }
 
@@ -359,7 +359,7 @@ main section{
 }
 
 .end > .cardContainer:hover .projetosText{
-  animation: slideRight 1s 20ms ease;
+  animation: slideRight 1s 100ms ease;
   animation-fill-mode: forwards; /*faz a animação pausar no final*/
 }
 
@@ -377,7 +377,7 @@ main section{
 }
 
 .start > .cardContainer:hover .projetosText{
-  animation: slideLeft 1s 20ms ease;
+  animation: slideLeft 1s 100ms ease;
   animation-fill-mode: forwards; /*faz a animação pausar no final*/
 }
 
@@ -502,4 +502,39 @@ main section{
   font-family: var(--fontText);
   font-variant: small-caps;
   color: #fff;
+}
+
+  /*contato*/
+.footer {
+  background-image: linear-gradient(to top, var(--offBlack) 60%, var(--blue));
+  padding-top: 3em;
+  padding-bottom: 10em;
+}
+
+.footer h1 {
+  text-align: center;
+  color: var(--offWhite);
+  text-shadow: 3px 3px 3px #00000073;
+  font-size: clamp(40px, 6vw, 80px);
+  margin-bottom: 2rem;
+}
+
+.contatoList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  width: 100%;
+  margin: auto;
+  justify-content: space-evenly;
+  font-size: 40px;
+}
+
+.contatoList li {
+  width: 4em;
+  text-align: center;
+}
+
+.contatoList a {
+  color: var(--offWhite);
 }
