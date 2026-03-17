@@ -85,68 +85,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 1.5em;
   }
-
-  /*projetos*/
-
-  .projetos {
-    padding: 2em 0em;
-  }
-
-  .container {
-    flex-direction: column-reverse;
-    justify-content: center;
-    padding: .5em;
-    margin-bottom: 1em;
-  }
-
-  .cardContainer {
-    width: 100%;
-    padding: 5px;
-  }
-
-  .start > .cardContainer:hover .projetosText{
-    animation: none;
-  }
-
-  .end > .cardContainer:hover .projetosText{
-    animation: none;
-  }
-
-  .projetosText {
-    position: inherit;
-
-    background-color: var(--offBlack);
-    color: var(--offWhite);
-    height: auto;
-    border-bottom: 2px solid var(--offWhite);
-  }
-  
-  .projetosText h2 {
-    margin: auto;
-    display: block;
-  }
-
-  .projetosText p {
-    width: 100%;
-    font-size: .9rem;
-    margin: auto;
-    text-align: justify;
+/*projetos & footer no mobile*/
+  .projetosGrid {
+    padding: 0;
   }
 
   .btnContainer {
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 0 0;
+    flex-direction: column;
   }
 
-  .btnCard {
-    width: 40%;
-    text-align: center;
+  .footerTop h1 {
+    font-size: 2.5rem;
   }
-
-  .tecList {
-    padding: .5em;
-  }
-
 }
-
