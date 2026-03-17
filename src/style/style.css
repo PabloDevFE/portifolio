@@ -258,87 +258,87 @@ main h1 {
 }
 
 /*skills*/
+/*skills*/
 .skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* Centraliza verticalmente na tela */
-}
-
-.skills h1 {
-  text-align: center;
-}
-
-.skills ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 1em;
-  list-style: none;
-  text-align: center;
-  padding-top: 20px;
-  font-size: clamp(35px, 7vw, 40px);
-  ;
-}
-
-.skills>ul>li>abbr>i {
-  width: var(--cardSkill);
-  height: var(--cardSkill);
-
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin: auto;
-
-  color: var(--purple);
-  border: 2px solid var(--offBlack);
-  background-color: #161a1c13;
-  text-shadow: 0px 0px 3px #0000005b;
-  border-radius: 5px 20px;
-  transition: .6s;
+  background-color: var(--offWhite);
   position: relative;
 }
 
-.skills>ul>li>abbr>i::after {
-  content: "";
-  width: 80%;
-  height: 2px;
-  position: absolute;
-  top: -10px;
-  left: 0px;
-  background-color: var(--purple);
+.skillsHeader {
+  text-align: center;
+  margin-bottom: 3em;
 }
 
-.skills>ul>li>abbr>i:hover::after {
-  content: "";
-  width: 70%;
-  height: 2px;
-  position: absolute;
-  background-color: var(--orange);
-  left: auto;
-  right: 0;
-  transition: 1s;
-  animation: upSize .6s linear;
+.skillsHeader h1 {
+  color: var(--offBlack);
 }
 
-.skills>ul>li>abbr>i:hover {
-  transform: scale(1.3);
-  border-radius: 20px 5px;
-  color: var(--orange);
-  background-color: var(--offBlack);
+.skillsHeader p {
+  color: var(--gray);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-@keyframes upSize {
-  0% {
-    width: 70%;
-  }
+.skillsGrid {
+  display: grid;
+  /* Cria colunas responsivas que se adaptam sozinhas ao tamanho da tela */
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2em;
+  width: 100%;
+}
 
-  50% {
-    width: 0%;
-  }
+.skillCard {
+  background-color: var(--white);
+  padding: 2.5em 1em;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  border-bottom: 4px solid transparent; /* Preparando a borda colorida */
+  
+  /* Animação com efeito elástico "bouncy" para ficar artístico */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
 
-  100% {
-    width: 70%;
-  }
+.skillCard i {
+  font-size: 4.5rem;
+  color: var(--gray);
+  transition: all 0.4s ease;
+}
+
+.skillCard h3 {
+  font-family: var(--fontDestaque);
+  font-size: 1.5rem;
+  color: var(--gray);
+  letter-spacing: 2px;
+  transition: color 0.4s ease;
+}
+
+/* EFEITOS DE HOVER (Quando passa o mouse) */
+.skillCard:hover {
+  transform: translateY(-10px);
+  /* Usa a variável de cor definida lá no HTML */
+  border-bottom: 4px solid var(--brand-color);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.skillCard:hover i {
+  color: var(--brand-color);
+  transform: scale(1.1); /* Ícone cresce levemente */
+  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skillCard:hover h3 {
+  color: var(--offBlack);
 }
 
 /*================== Ajuste global de harmonia ==================*/
