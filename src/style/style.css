@@ -28,15 +28,22 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 3.5em;
-
-  /* Ativa o "imã" de scroll na vertical */
-  scroll-snap-type: y mandatory;
+  scroll-padding-top: 3.5em; /* Altura do header */
 }
 
 body {
-  min-height: 100vh;
   background-color: var(--offWhite);
+  /* Impede que a página crie barra de rolagem geral no PC, o JS vai controlar isso */
+  overflow: hidden; 
+}
+
+/* Força as seções a terem exatamente o tamanho da tela para parecerem slides */
+main section, .footer {
+  padding: 5em 1em;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 :root {
@@ -128,6 +135,33 @@ p {
   transition: .4s;
 }
 
+/* Efeito para quando o menu for "focado/passar o mouse" */
+.navigation > a:hover::before {
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: #fff;
+  position: absolute;
+  bottom: -5px; /* Desce a linha um pouco para não colar no texto */
+  left: 0;
+  transition: .4s;
+}
+
+/* NOVO: Estilo visual para a seção atual (Sinalização no menu) */
+.navigation > a.navActive {
+  color: var(--orange); /* Muda a cor do texto para dar destaque */
+}
+
+.navigation > a.navActive::before {
+  content: "";
+  height: 2px;
+  width: 70%;
+  background-color: var(--orange); /* Linha laranja permanente */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: .4s;
+}
 
 .logo img {
   filter: invert(1);
@@ -258,14 +292,13 @@ main h1 {
 }
 
 /*skills*/
-/*skills*/
-.skills {
+
+/* Substitua a correção anterior por esta */
+.skills, .projetos {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--offWhite);
-  position: relative;
+  justify-content: center; /* Centraliza verticalmente de novo */
+  min-height: 100vh;
 }
 
 .skillsHeader {
@@ -342,7 +375,6 @@ main h1 {
 }
 
 /*================== Ajuste global de harmonia ==================*/
-/* Adicione esta classe para evitar que o site estique infinitamente no PC */
 .limitador {
   max-width: 1200px;
   margin: 0 auto;
@@ -360,15 +392,33 @@ main h1 {
 .projetos h1 {
   color: var(--offWhite);
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: .3em;
 }
 
-/* Novo layout de grid para os cards */
+
+/* =================CARROSSEL DE PROJETOS ================= */
 .projetosGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2.5em;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Mantém a funcionalidade de arrastar no celular invisível */
+  gap: 2em;
   padding: 1em;
+  
+  /* Centraliza os cards perfeitamente na tela do computador */
+  justify-content: center;
+  align-items: stretch;
+  
+  /* Scroll Snap Horizontal invisível */
+  scroll-snap-type: x mandatory; 
+  
+  /* MÁGICA: Esconde a barra de rolagem completamente (Firefox e IE) */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+/* MÁGICA: Esconde a barra de rolagem completamente (Chrome, Safari, Edge) */
+.projetosGrid::-webkit-scrollbar {
+  display: none; 
 }
 
 .cardProjeto {
@@ -379,6 +429,90 @@ main h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  
+  /* Tamanho ideal para não estourar a altura da tela */
+  width: clamp(280px, 80vw, 350px);
+  flex: 0 0 auto; 
+  
+  scroll-snap-align: center; 
+}
+
+/* Ajustes finos para garantir que os cards caibam na altura do monitor */
+.imgWrapper {
+  width: 100%;
+  height: 180px; /* Altura reduzida para caber melhor na tela */
+  overflow: hidden;
+}
+
+.imgCard {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.cardProjeto:hover .imgCard {
+  transform: scale(1.05);
+}
+
+.projetosContent {
+  padding: 1.2em; /* Padding levemente reduzido */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; 
+}
+
+.projetosContent h2 {
+  font-family: var(--fontDestaque);
+  font-size: 2rem; /* Fonte um pouco menor para economizar espaço vertical */
+  color: var(--offBlack);
+  margin-bottom: 0.5rem;
+}
+
+.projetosContent p {
+  color: var(--gray);
+  font-size: 0.95rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+  flex-grow: 1; 
+}
+
+.tecList {
+  display: flex;
+  gap: 1em;
+  font-size: 1.3rem;
+  color: var(--purple);
+  margin-bottom: 1.2rem;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 1em;
+}
+
+.btnCard {
+  flex: 1; 
+  text-align: center;
+  padding: 0.7em 0;
+  border-radius: 6px;
+  font-family: var(--fontText);
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  border: 2px solid var(--offBlack);
+  color: var(--offBlack);
+  transition: all 0.3s ease;
+}
+
+.btnCard.solid {
+  background-color: var(--offBlack);
+  color: var(--white);
+}
+
+.btnCard:hover {
+  background-color: var(--blue);
+  border-color: var(--blue);
+  color: var(--white);
 }
 
 .cardProjeto:hover {
@@ -466,81 +600,128 @@ main h1 {
   color: var(--white);
 }
 
-/*contato*/
+/*============================================= contato / footer =============================================*/
 .footer {
-  background-image: linear-gradient(to top, var(--offBlack) 60%, var(--blue));
-  padding: 4em 1em 2em 1em;
+  /* Mantém o azul, mas com um gradiente super sutil e elegante */
+  background: linear-gradient(135deg, var(--blue), #004b9e);
   color: var(--offWhite);
-  text-align: center;
-}
-
-.footerTop {
-  margin-bottom: 4em;
-}
-
-.footerTop h1 {
-  font-size: clamp(35px, 5vw, 60px);
-  margin-bottom: 0.5rem;
-  text-shadow: none;
-}
-
-.footerTop p {
-  font-size: 1.1rem;
-  margin-bottom: 2em;
-  opacity: 0.8;
-}
-
-.btnContato {
-  display: inline-block;
-  background-color: var(--orange);
-  color: var(--white);
-  padding: 1em 2em;
-  border-radius: 30px;
-  font-family: var(--fontText);
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.btnContato i {
-  margin-right: 8px;
-}
-
-.btnContato:hover {
-  background-color: #ff6a2e;
-  /* Tom mais escuro de laranja */
-  transform: scale(1.05);
-}
-
-.footerBottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 2em;
+  
+  /* Flexbox para garantir que o conteúdo fique no meio da tela (slide) */
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5em;
+  justify-content: center;
+  position: relative;
 }
 
-.contatoList {
+.footerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4em;
+  width: 100%;
+  flex-grow: 1; /* Empurra o copyright lá pro fundo */
+}
+
+/* Lado Esquerdo */
+.footerLeft {
+  max-width: 600px;
+}
+
+.footerLeft h1 {
+  font-size: clamp(40px, 5vw, 70px);
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+  text-shadow: none; /* Remove a sombra antiga para um visual mais limpo/flat */
+  color: var(--white);
+}
+
+.footerLeft p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-bottom: 2.5em;
+  line-height: 1.6;
+}
+
+.bigEmail {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--fontDestaque);
+  font-size: 2rem;
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.bigEmail i {
+  transition: transform 0.3s ease;
+}
+
+.bigEmail:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+}
+
+.bigEmail:hover i {
+  transform: translateX(10px); /* A setinha anda pro lado ao passar o mouse */
+}
+
+/* Lado Direito */
+.footerRight {
+  min-width: 250px;
+}
+
+.footerRight h3 {
+  font-family: var(--fontText);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.6;
+  margin-bottom: 1.5em;
+}
+
+.socialLinksMenu {
   list-style: none;
   display: flex;
-  gap: 1.5em;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.socialLinksMenu a {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-family: var(--fontText);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.socialLinksMenu a i {
   font-size: 2rem;
+  width: 35px; /* Mantém os ícones alinhados */
 }
 
-.contatoList a {
-  color: var(--offWhite);
-  opacity: 0.8;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.contatoList a:hover {
-  opacity: 1;
-  transform: translateY(-5px);
+.socialLinksMenu a:hover {
   color: var(--orange);
+  transform: translateX(10px); /* O link dá um 'passinho' pra direita ao passar o mouse */
 }
 
-.copyright {
-  font-size: 0.9rem;
+/* Copyright na base */
+.copySection {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5em;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   opacity: 0.6;
+  font-size: 0.9rem;
+}
+
+.copySection i {
+  color: var(--pink); /* Coração rosa pra dar um charme */
 }
