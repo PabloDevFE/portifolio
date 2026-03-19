@@ -23,8 +23,7 @@
     scroll-snap-stop: always; /* Obriga a parar na seção, sem pular nenhuma */
   }
 
-  /* O resto do seu mq.css continua exatamente igual abaixo... */
-  /*====================================header====================================*/
+  /*==================================== header ====================================*/
   .btnHeader {
     display: block;
   }
@@ -35,11 +34,11 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh; /* Limpei a duplicata que tinha no seu código original */
+    height: 100vh; 
     padding: 1.3em;
     gap: 3em;
     padding-top: 7em;
-    background-color: rgba(0, 0, 0, 0.9); /* Deixei mais escuro pra ler melhor no celular */
+    background-color: rgba(0, 0, 0, 0.9); 
     margin-left: -100vw;
     animation-duration: 0.7s;
   }
@@ -49,14 +48,14 @@
     to {margin-left: 0vw;}
   }
 
-  /*====================================main====================================*/
+  /*==================================== main ====================================*/
   .main h1 {
     font-size: clamp(40px, 15vw, 60px);
   }
 
   /*section roxa (Home no mobile)*/
   .homeWrapper {
-    flex-direction: column-reverse; /* Força a foto a ficar em cima e o texto embaixo */
+    flex-direction: column-reverse;
     text-align: center;
     padding-top: 2em;
   }
@@ -66,7 +65,7 @@
   }
 
   .homeText h1 {
-    font-size: 4rem; /* Ajuste o tamanho do nome pro celular */
+    font-size: 4rem;
   }
 
   .homeText h2 {
@@ -84,10 +83,11 @@
   }
 
   .imgPerfil {
-    width: 70%; /* Imagem um pouco menor no celular para caber o texto bem */
+    width: 70%; 
   }
 
-  /*sobre*/
+  /*============================================= SOBRE ====================================================*/
+
   .sobreWrapper {
     flex-direction: column;
     text-align: center;
@@ -96,17 +96,17 @@
 
   .sobreText {
     width: 100%;
-    order: 1; /* Faz o texto aparecer primeiro no celular */
+    order: 1;
   }
 
   .sobreText p {
     font-size: 1rem;
-    text-align: center; /* Centraliza o texto no celular fica mais bonito */
+    text-align: center;
   }
 
   .sobreImgBox {
     width: 100%;
-    order: 2; /* A imagem vai pra baixo do texto */
+    order: 2;
     min-height: 300px;
   }
 
@@ -115,7 +115,7 @@
     height: 300px;
   }
 
-  /*skills no mobile*/
+/*============================================= SKILLS  ====================================================*/
   .skillsHeader p {
     font-size: 0.95rem;
     padding: 0 1em;
@@ -138,9 +138,9 @@
     font-size: 1.2rem;
   }
 
-/* projetos no mobile */
+/*============================================= PROJETOS ====================================================*/
   .btnNavProjeto {
-    display: none; /* Esconde as setas no celular */
+    display: none;
   }
 
   .scrollHintMobile {
@@ -159,38 +159,36 @@
 
   .projetosTrack {
     gap: 1.5em;
-    /* CORREÇÃO DA SOMBRA NO CELULAR: Padding nas laterais e embaixo */
     padding: 1.5em 1em 3em 1em; 
   }
 
   .cardProjetoLargo {
     flex-direction: column;
     height: auto; 
-    /* Reduzi de 90vw para 85vw. Isso dá margem para a sombra respirar dos lados e mostra o próximo card direitinho */
     width: 85vw; 
     min-width: 85vw; 
   }
 
   .imgBoxLargo {
-    height: 220px; /* Imagem levemente mais alta no celular para dar presença */
+    height: 220px;
     flex: none; 
   }
 
   .contentBoxLargo {
-    padding: 1.8em 1.5em; /* Ajuste fino no espaço do texto */
+    padding: 1.8em 1.5em;
   }
   .contentBoxLargo h2 {
     font-size: 2rem;
   }
 
   .btnContainerLargo {
-    flex-direction: column; /* Botões um embaixo do outro no celular */
+    flex-direction: column;
   }
 
-/* footer no mobile */
+/*============================================= FOOTER ====================================================*/
   .footerWrapper {
     flex-direction: column;
-    align-items: flex-start; /* Alinha tudo à esquerda no celular */
+    align-items: flex-start;
     gap: 3em;
     justify-content: center;
   }
