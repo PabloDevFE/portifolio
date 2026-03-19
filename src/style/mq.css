@@ -54,9 +54,11 @@
     font-size: clamp(40px, 15vw, 60px);
   }
 
-  /*section roxa*/
-  .home {
-    padding: 2em .5em;
+  /*section roxa (Home no mobile)*/
+  .homeWrapper {
+    flex-direction: column-reverse; /* Força a foto a ficar em cima e o texto embaixo */
+    text-align: center;
+    padding-top: 2em;
   }
   
   .homeText {
@@ -64,45 +66,53 @@
   }
 
   .homeText h1 {
-    width: 100%;
-    text-align: center;
-  }
-  
-  .homeText p {
-    display: block;
-    margin: auto;
-    width: 90%;
-    font-size: 1rem;
+    font-size: 4rem; /* Ajuste o tamanho do nome pro celular */
   }
 
-  .socialMidias {
-    margin-bottom: 2.5em;
+  .homeText h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5em;
   }
   
+  .bio {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
   .socialMidias ul {
-    justify-content: space-around;
+    justify-content: center;
+  }
+
+  .imgPerfil {
+    width: 70%; /* Imagem um pouco menor no celular para caber o texto bem */
   }
 
   /*sobre*/
-  .sobre {
-    flex-direction: column; /* No celular, foto e texto ficam empilhados para não espremer */
+  .sobreWrapper {
+    flex-direction: column;
     text-align: center;
+    gap: 3em;
   }
 
   .sobreText {
-    display: block;
-    margin: auto;
-    width: 90%;
+    width: 100%;
+    order: 1; /* Faz o texto aparecer primeiro no celular */
   }
 
   .sobreText p {
     font-size: 1rem;
-    text-align: justify;
+    text-align: center; /* Centraliza o texto no celular fica mais bonito */
   }
 
-  .imgSobre {
-    width: 60%; /* Ajuste a imagem do sobre para o celular */
-    margin-top: 2em;
+  .sobreImgBox {
+    width: 100%;
+    order: 2; /* A imagem vai pra baixo do texto */
+    min-height: 300px;
+  }
+
+  .imgBg {
+    width: 250px;
+    height: 300px;
   }
 
   /*skills no mobile*/
@@ -112,23 +122,29 @@
   }
 
   .skillsGrid {
-    grid-template-columns: repeat(2, 1fr); /* Força 2 colunas no celular */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1em;
   }
 
-  .skillCard {
+  .skillCard.darkCard {
     padding: 1.5em 0.5em;
   }
 
-  .skillCard i {
+  .skillCard.darkCard i {
     font-size: 3.5rem;
   }
 
-  .skillCard h3 {
+  .skillCard.darkCard h3 {
     font-size: 1.2rem;
   }
 
   /* projetos no mobile */
+  /*projetos no mobile*/
+  .projetosHeader p {
+    font-size: 0.95rem;
+    padding: 0 1em;
+  }
+   
   .projetosGrid {
     justify-content: flex-start; /* Permite arrastar os projetos para o lado com o dedo */
     padding: 1em 0.5em;

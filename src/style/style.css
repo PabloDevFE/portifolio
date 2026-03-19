@@ -201,117 +201,243 @@ main h1 {
   margin-bottom: 1.5rem;
 }
 
-/*home*/
+/*============================================= home =============================================*/
 .home {
   background-image: linear-gradient(45deg, #6752ee, #2a2163);
   background-size: 200%;
   animation: infinite 10s bgMoviment cubic-bezier(0.4, 0, 0.2, 1);
   color: #fff;
-
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 1rem;
+  align-items: center; /* Garante que o conteúdo fique no centro do slide */
 }
 
 @keyframes bgMoviment {
-  0% {
-    background-position: bottom left;
-  }
-
-  50% {
-    background-position: top right;
-  }
+  0% { background-position: bottom left; }
+  50% { background-position: top right; }
+  100% { background-position: bottom left; }
 }
 
-.imgPerfil {
-  filter: drop-shadow(15px 15px 6px #00000073);
-  width: clamp(280px, 40vw, 400px);
+.homeWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  /* Garante que o layout não esprema caso a tela seja média */
+  flex-wrap: wrap-reverse; 
 }
 
 .homeText {
-  width: clamp(100px, 50vw, 700px);
+  width: clamp(300px, 50vw, 600px);
 }
 
-.socialMidias {
-  margin-bottom: 2em;
+.saudacao {
+  font-family: var(--fontText);
+  font-size: 1.2rem;
+  color: var(--pink); /* Tom claro que combina maravilhosamente com roxo */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
+.homeText h1 {
+  font-family: var(--fontTitulo);
+  font-size: clamp(50px, 8vw, 110px);
+  line-height: 1.4;
+  color: var(--white);
+  margin-bottom: 0.1em;
+  text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra mais suave e espalhada */
+}
+
+.homeText h2 {
+  font-family: var(--fontText);
+  font-size: clamp(20px, 3vw, 35px);
+  font-weight: 300;
+  color: var(--orange);
+  margin-bottom: 1em;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bio {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2em; /* Empurra as redes sociais para baixo */
+}
+
+/* Redes Sociais da Home */
 .socialMidias ul {
   list-style: none;
   display: flex;
-  justify-content: flex-start;
-  gap: 2em;
-  font-size: clamp(30px, 3vw, 40px);
+  gap: 1.5em;
 }
 
 .socialMidias a {
-  color: #fff;
-  text-shadow: 3px 3px 3px #00000073;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.1); /* Círculo translúcido ao redor do ícone */
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .socialMidias a:hover {
-  text-shadow: 0px 0px 10px #ffffff9a;
-  transition: .4s;
-  font-size: 110%;
+  background-color: var(--orange);
+  border-color: var(--orange);
+  transform: translateY(-5px); /* Dá um pulinho pra cima */
+  box-shadow: 0px 10px 20px rgba(255, 133, 84, 0.4);
 }
 
-.homeText p {
-  text-align: justify;
-  text-shadow: 2px 2px 1px #00000050;
-  font-size: 1.2rem;
-}
-
-/*sobre*/
-.sobre {
+/* Imagem de Perfil */
+.imgContainer {
+  flex: 1;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+}
+
+.imgPerfil {
+  width: clamp(250px, 35vw, 450px);
+  filter: drop-shadow(0px 20px 15px rgba(0, 0, 0, 0.4));
+  /* Animação de flutuação para dar vida */
+  animation: floatProfile 6s ease-in-out infinite;
+}
+
+@keyframes floatProfile {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+/*============================================= sobre =============================================*/
+.sobre {
+  background-color: var(--offWhite);
+  display: flex;
   align-items: center;
-  gap: 1rem;
+}
+
+.sobreWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4em;
+}
+
+/* Subtítulos charmosos em cima do H1 */
+.sectionSubtitle {
+  font-family: var(--fontText);
+  color: var(--orange);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5em;
 }
 
 .sobreText {
-  width: clamp(300px, 50vw, 900px);
+  flex: 1;
+  max-width: 600px;
 }
 
 .sobreText h1 {
-  text-align: center;
+  font-family: var(--fontTitulo);
+  font-size: clamp(40px, 6vw, 70px);
+  color: var(--offBlack);
+  margin-bottom: 0.5em;
+  text-shadow: none; /* Mais limpo */
 }
 
 .sobreText p {
-  text-shadow: 1px 1px 1px #0000004f;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 1.5em;
   text-align: justify;
 }
 
-.imgSobre {
-  min-width: 200px;
-  width: 20%;
+.btnCv {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--offBlack);
+  color: var(--white);
+  padding: 1em 2em;
+  border-radius: 8px;
+  font-family: var(--fontText);
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin-top: 1em;
 }
 
-/*skills*/
+.btnCv:hover {
+  background-color: var(--orange);
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgb(255, 133, 84, 0.3);
+}
 
-/* Substitua a correção anterior por esta */
-.skills, .projetos {
+/* Imagem do Sobre com moldura moderna */
+.sobreImgBox {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.imgBg {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  background-color: var(--purple);
+  border-radius: 20px;
+  transform: rotate(-5deg);
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.sobreImgBox:hover .imgBg {
+  transform: rotate(0deg);
+  background-color: var(--orange);
+}
+
+.imgSobre {
+  position: relative;
+  width: clamp(250px, 25vw, 350px);
+  z-index: 2;
+  border-radius: 15px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.sobreImgBox:hover .imgSobre {
+  transform: scale(1.05);
+}
+
+/*============================================= skills (DARK MODE) =============================================*/
+.skills {
+  background-color: var(--offBlack); /* O pulo do gato: Fundo Escuro! */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente de novo */
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .skillsHeader {
   text-align: center;
-  margin-bottom: 3em;
+  margin-bottom: 4em;
 }
 
 .skillsHeader h1 {
-  color: var(--offBlack);
+  color: var(--white);
+  text-shadow: none;
 }
 
 .skillsHeader p {
-  color: var(--gray);
+  color: #a0a0a0;
   font-size: 1.1rem;
   max-width: 600px;
   margin: 0 auto;
@@ -320,58 +446,57 @@ main h1 {
 
 .skillsGrid {
   display: grid;
-  /* Cria colunas responsivas que se adaptam sozinhas ao tamanho da tela */
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 2em;
   width: 100%;
 }
 
-.skillCard {
-  background-color: var(--white);
+.skillCard.darkCard {
+  /* Fundo translúcido (Glassmorphism escuro) */
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2.5em 1em;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
-  border-bottom: 4px solid transparent; /* Preparando a borda colorida */
-  
-  /* Animação com efeito elástico "bouncy" para ficar artístico */
+  border-bottom: 4px solid transparent;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
 
-.skillCard i {
+.skillCard.darkCard i {
   font-size: 4.5rem;
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.6);
   transition: all 0.4s ease;
 }
 
-.skillCard h3 {
+.skillCard.darkCard h3 {
   font-family: var(--fontDestaque);
   font-size: 1.5rem;
-  color: var(--gray);
+  color: rgba(255, 255, 255, 0.8);
   letter-spacing: 2px;
   transition: color 0.4s ease;
 }
 
-/* EFEITOS DE HOVER (Quando passa o mouse) */
-.skillCard:hover {
+/* EFEITOS NEON NO HOVER */
+.skillCard.darkCard:hover {
   transform: translateY(-10px);
-  /* Usa a variável de cor definida lá no HTML */
+  background-color: rgba(255, 255, 255, 0.08);
   border-bottom: 4px solid var(--brand-color);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  /* Sombra brilhante na cor da marca */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 0 0 20px var(--brand-color);
 }
 
-.skillCard:hover i {
+.skillCard.darkCard:hover i {
   color: var(--brand-color);
-  transform: scale(1.1); /* Ícone cresce levemente */
-  text-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  text-shadow: 0px 0px 20px var(--brand-color); /* Ícone brilha */
 }
 
-.skillCard:hover h3 {
-  color: var(--offBlack);
+.skillCard.darkCard:hover h3 {
+  color: var(--white);
 }
 
 /*================== Ajuste global de harmonia ==================*/
@@ -389,12 +514,54 @@ main h1 {
   justify-content: center; /* Centraliza verticalmente na tela */
 }
 
+.subtitleBranco {
+  color: #fff;
+}
+
 .projetos h1 {
   color: var(--offWhite);
   text-align: center;
-  margin-bottom: .3em;
+  margin-bottom: 0em;
+}
+.projetos {
+  background: linear-gradient(135deg, var(--orange), #e65a1f);
 }
 
+.projetosHeader {
+  text-align: center;
+  margin-bottom: 1.5em; /* Reduzido para economizar espaço vertical */
+}
+
+.projetosHeader h1 {
+  font-size: clamp(35px, 5vw, 60px); /* Fonte levemente menor para caber em notebooks */
+  color: var(--white);
+  margin-bottom: 0.2em;
+}
+
+/* ================= AJUSTE NOS CARDS PARA CABEREM NO SLIDE ================= */
+.imgWrapper {
+  width: 100%;
+  height: 150px; /* Reduzido de 180px/220px para garantir que o card caiba na tela */
+  overflow: hidden;
+}
+
+.projetosContent h2 {
+  font-size: 1.8rem; /* Título do card mais compacto */
+}
+
+.projetosContent p {
+  font-size: 0.9rem; /* Texto do card mais compacto */
+  margin-bottom: 1em;
+}
+
+.projetosGrid {
+  display: flex;
+  justify-content: center; /* Centraliza os cards no meio da tela laranja */
+  gap: 1.5em;
+  padding: 1em 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
 
 /* =================CARROSSEL DE PROJETOS ================= */
 .projetosGrid {

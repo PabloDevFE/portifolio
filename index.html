@@ -1,231 +1,258 @@
 <!DOCTYPE html>
 <html lang="Pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="src/style/style.css" />
-    <link rel="stylesheet" href="src/style/mq.css" />
 
-    <!--Font Awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header class="header" id="header">
-      <button class="btnHeader" id="btnHeaderHamburguer">
-        <i class="fa-solid fa-bars iconBranco"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="src/style/style.css" />
+  <link rel="stylesheet" href="src/style/mq.css" />
+
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <button class="btnHeader" id="btnHeaderHamburguer">
+      <i class="fa-solid fa-bars iconBranco"></i>
+    </button>
+
+    <div class="logo">
+      <img src="src/images/logo-header.svg" alt="logo PABLO" />
+    </div>
+
+    <nav class="navigation" id="navigation">
+      <button class="btnHeader" id="btnHeaderClose">
+        <i class="fa-solid fa-x iconBranco"></i>
       </button>
+      <a href="#home" id="btnHome" class="navActive">HOME</a>
+      <a href="#sobre" id="btnSobre">SOBRE</a>
+      <a href="#skills" id="btnSkills">SKILLS</a>
+      <a href="#projetos" id="btnProjetos">PROJETOS</a>
+      <a href="#contato" id="btnContatos">CONTATO</a>
+    </nav>
+  </header>
 
-      <div class="logo">
-        <img src="src/images/logo-header.svg" alt="logo PABLO" />
-      </div>
-
-      <nav class="navigation" id="navigation">
-        <button class="btnHeader" id="btnHeaderClose">
-          <i class="fa-solid fa-x iconBranco"></i>
-        </button>
-        <a href="#home" id="btnHome" class="navActive">HOME</a>
-        <a href="#sobre" id="btnSobre">SOBRE</a>
-        <a href="#skills" id="btnSkills">SKILLS</a>
-        <a href="#projetos" id="btnProjetos">PROJETOS</a>
-        <a href="#contato" id="btnContatos">CONTATO</a>
-      </nav>
-    </header>
-
-    <main class="main" id="main">
-      <section class="home" id="home">
-        <img
-          src="src/images/perfil-simple.png"
-          alt="Foto de perfil"
-          class="imgPerfil"
-        />
+  <main class="main" id="main">
+    <section class="home" id="home">
+      <div class="limitador homeWrapper">
 
         <div class="homeText">
+          <p class="saudacao">Olá, bem-vindo(a) ao meu portfólio!</p>
+          <h1>Pablo Henrique</h1>
+          <h2>Desenvolvedor Web Front-end</h2>
+
+          <p class="bio">
+            Transformo ideias em experiências digitais interativas. Tenho paixão por criar interfaces limpas,
+            responsivas e otimizadas utilizando JavaScript, React, HTML e CSS.
+          </p>
+
           <div class="socialMidias">
             <ul>
-              <li><a href="https://www.instagram.com/pablo_dev01/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a></li>
               <li><a href="https://github.com/PabloDevFE" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a href="https://www.instagram.com/pablo_dev01/" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a></li>
             </ul>
           </div>
-
-          <h1>Desenvolvedor web</h1>
-          <p>
-            Programador Front-end com experiência em: JavaScript, HTML, CSS, React, Bulma, entre outras tecnologias...
-          </p>
         </div>
-      </section><!--home-->
-      
-      
-      <section class="sobre" id="sobre">
+
+        <div class="imgContainer">
+          <img src="src/images/perfil-simple.png" alt="Foto de perfil de Pablo Henrique" class="imgPerfil" />
+        </div>
+
+      </div>
+    </section><!--home-->
+
+    <section class="sobre" id="sobre">
+      <div class="limitador sobreWrapper">
+
+        <div class="sobreImgBox">
+          <!-- A div abaixo cria aquele fundo geométrico charmoso atrás da foto -->
+          <div class="imgBg"></div>
+          <img src="src/images/sobre-bw.png" alt="Foto sobre Pablo Henrique" class="imgSobre">
+        </div>
+
         <div class="sobreText">
+          <h2 class="sectionSubtitle">Quem sou eu</h2>
           <h1>Sobre mim</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus nam
-            quibusdam nobis provident iste laborum expedita dignissimos, quia
-            voluptas deleniti similique ad nisi atque ullam natus facilis libero
-            sapiente. Unde!
+            Meu nome é Pablo Henrique, tenho 21 anos e sou desenvolvedor Front-End. Sou formado em Análise e
+            Desenvolvimento de Sistemas, curso Ciência da Computação e possuo pós-graduação em Inteligência Artificial.
           </p>
+          <p>
+            Atuo na criação de interfaces modernas e responsivas utilizando HTML5, CSS3, JavaScript e React, além de
+            trabalhar com Git e GitHub. Sou apaixonado por tecnologia e estou sempre buscando evoluir e desenvolver
+            soluções cada vez mais eficientes.
+          </p>
+          <p>
+
+            <a href="#" class="btnCv" target="_blank">
+              <i class="fa-solid fa-download"></i> Baixar Currículo
+            </a>
         </div>
 
-        <img src="src/images/sobre-bw.png" alt="" class="imgSobre">
-      </section><!--sobre-->
+      </div>
+    </section>
 
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+      <div class="limitador">
+        <div class="skillsHeader">
+          <h2 class="sectionSubtitle">Meu Arsenal</h2>
+          <h1>Minhas Skills</h1>
+          <p>Tecnologias e ferramentas que utilizo no meu dia a dia para construir aplicações web modernas, rápidas e
+            escaláveis.</p>
+        </div>
 
-      <section class="skills" id="skills">
-        <div class="limitador">
-          <div class="skillsHeader">
-            <h1>Minhas Skills</h1>
-            <p>Tecnologias e ferramentas que utilizo no meu dia a dia para construir aplicações web modernas e responsivas.</p>
+        <div class="skillsGrid">
+          <!-- Skill: HTML -->
+          <div class="skillCard darkCard" style="--brand-color: #E34F26;">
+            <i class="fa-brands fa-html5"></i>
+            <h3>HTML</h3>
           </div>
 
-          <div class="skillsGrid">
-            <!-- Skill: HTML -->
-            <div class="skillCard" style="--brand-color: #E34F26;">
-              <i class="fa-brands fa-html5"></i>
-              <h3>HTML5</h3>
-            </div>
-            
-            <!-- Skill: CSS -->
-            <div class="skillCard" style="--brand-color: #1572B6;">
-              <i class="fa-brands fa-css3-alt"></i>
-              <h3>CSS3</h3>
-            </div>
-            
-            <!-- Skill: JavaScript -->
-            <div class="skillCard" style="--brand-color: #F7DF1E;">
-              <i class="fa-brands fa-js"></i>
-              <h3>JAVASCRIPT</h3>
-            </div>
-            
-            <!-- Skill: React -->
-            <div class="skillCard" style="--brand-color: #61DAFB;">
-              <i class="fa-brands fa-react"></i>
-              <h3>REACT</h3>
-            </div>
+          <!-- Skill: CSS -->
+          <div class="skillCard darkCard" style="--brand-color: #1572B6;">
+            <i class="fa-brands fa-css3-alt"></i>
+            <h3>CSS</h3>
+          </div>
 
-            <!-- Skill: Git -->
-            <div class="skillCard" style="--brand-color: #F05032;">
-              <i class="fa-brands fa-git-alt"></i>
-              <h3>GIT</h3>
-            </div>
+          <!-- Skill: JavaScript -->
+          <div class="skillCard darkCard" style="--brand-color: #F7DF1E;">
+            <i class="fa-brands fa-js"></i>
+            <h3>JAVASCRIPT</h3>
+          </div>
 
-            <!-- Skill: GitHub -->
-            <div class="skillCard" style="--brand-color: #181717;">
-              <i class="fa-brands fa-github"></i>
-              <h3>GITHUB</h3>
-            </div>
+          <!-- Skill: React -->
+          <div class="skillCard darkCard" style="--brand-color: #61DAFB;">
+            <i class="fa-brands fa-react"></i>
+            <h3>REACT</h3>
+          </div>
+
+          <!-- Skill: Git -->
+          <div class="skillCard darkCard" style="--brand-color: #F05032;">
+            <i class="fa-brands fa-git-alt"></i>
+            <h3>GIT</h3>
+          </div>
+
+          <!-- Skill: GitHub -->
+          <div class="skillCard darkCard" style="--brand-color: #ffffff;">
+            <i class="fa-brands fa-github"></i>
+            <h3>GITHUB</h3>
           </div>
         </div>
-      </section><!--skills-->
-            
-<!-- ... seu código anterior (Home, Sobre, Skills) ... -->
-      
-      <section class="projetos" id="projetos">
-        <div class="limitador">
+      </div>
+    </section>
+
+    <!--PROJETOS-->
+    <section class="projetos" id="projetos">
+      <div class="limitador">
+
+        <div class="projetosHeader">
+          <h2 class="sectionSubtitle subtitleBranco">Meu Portfólio de</h2>
           <h1>Projetos</h1>
-    
-          <div class="projetosGrid">
-            
-            <!-- CARD 1 -->
-            <div class="cardProjeto">
-              <div class="imgWrapper">
-                <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard"/>
-              </div>
-              
-              <div class="projetosContent">
-                <h2>XMEN</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  veritatis repellat cupiditate dolorum assumenda ullam non cum.
-                </p>
-                
-                <div class="tecList">
-                  <i class="fa-brands fa-css3" title="CSS3"></i>
-                  <i class="fa-brands fa-html5" title="HTML5"></i>
-                  <i class="fa-brands fa-js" title="JavaScript"></i>
-                </div>
-                
-                <div class="btnContainer">
-                  <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
-                  <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
-                </div>
-              </div>
-            </div>
-    
-            <!-- CARD 2 -->
-            <div class="cardProjeto">
-              <div class="imgWrapper">
-                <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard"/>
-              </div>
-              
-              <div class="projetosContent">
-                <h2>XMEN</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  veritatis repellat cupiditate dolorum assumenda ullam non cum.
-                </p>
-                
-                <div class="tecList">
-                  <i class="fa-brands fa-css3" title="CSS3"></i>
-                  <i class="fa-brands fa-html5" title="HTML5"></i>
-                  <i class="fa-brands fa-js" title="JavaScript"></i>
-                </div>
-                
-                <div class="btnContainer">
-                  <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
-                  <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="cardProjeto">
-              <div class="imgWrapper">
-                <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard"/>
-              </div>
-              
-              <div class="projetosContent">
-                <h2>XMEN</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  veritatis repellat cupiditate dolorum assumenda ullam non cum.
-                </p>
-                
-                <div class="tecList">
-                  <i class="fa-brands fa-css3" title="CSS3"></i>
-                  <i class="fa-brands fa-html5" title="HTML5"></i>
-                  <i class="fa-brands fa-js" title="JavaScript"></i>
-                </div>
-                
-                <div class="btnContainer">
-                  <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
-                  <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
-                </div>
-              </div>
-            </div>
-            <!-- Fim dos Cards -->
-
-          </div>
         </div>
-      </section><!--projetos-->
-      
-    </main>
-    
+
+        <div class="projetosGrid">
+
+          <!-- CARD 1 -->
+          <div class="cardProjeto">
+            <div class="imgWrapper">
+              <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard" />
+            </div>
+
+            <div class="projetosContent">
+              <h2>XMEN</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                veritatis repellat cupiditate dolorum assumenda ullam non cum.
+              </p>
+
+              <div class="tecList">
+                <i class="fa-brands fa-css3" title="CSS3"></i>
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+              </div>
+
+              <div class="btnContainer">
+                <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
+                <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="cardProjeto">
+            <div class="imgWrapper">
+              <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard" />
+            </div>
+
+            <div class="projetosContent">
+              <h2>XMEN</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                veritatis repellat cupiditate dolorum assumenda ullam non cum.
+              </p>
+
+              <div class="tecList">
+                <i class="fa-brands fa-css3" title="CSS3"></i>
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+              </div>
+
+              <div class="btnContainer">
+                <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
+                <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="cardProjeto">
+            <div class="imgWrapper">
+              <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard" />
+            </div>
+
+            <div class="projetosContent">
+              <h2>XMEN</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                veritatis repellat cupiditate dolorum assumenda ullam non cum.
+              </p>
+
+              <div class="tecList">
+                <i class="fa-brands fa-css3" title="CSS3"></i>
+                <i class="fa-brands fa-html5" title="HTML5"></i>
+                <i class="fa-brands fa-js" title="JavaScript"></i>
+              </div>
+
+              <div class="btnContainer">
+                <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
+                <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
+              </div>
+            </div>
+          </div>
+          <!-- Fim dos Cards -->
+
+        </div>
+      </div>
+    </section><!--projetos-->
+
+
     <footer class="footer" id="contato">
       <div class="limitador footerWrapper">
-        
+
         <!-- Lado Esquerdo: Chamada e Email -->
         <div class="footerLeft">
           <h1>Vamos criar algo <br> incrivel juntos</h1>
-          <p>Estou sempre aberto a novas oportunidades, projetos freelance ou apenas para trocar uma ideia sobre tecnologia.</p>
-          
+          <p>Estou sempre aberto a novas oportunidades, projetos freelance ou apenas para trocar uma ideia sobre
+            tecnologia.</p>
+
           <a href="mailto:pablo@apesdigital.com" target="_blank" class="bigEmail">
             me envie um e-mail <i class="fa-solid fa-arrow-right"></i>
           </a>
@@ -259,16 +286,17 @@
         </div>
 
       </div>
-      
+
       <!-- Linha de Copyright no final da tela -->
       <div class="limitador copySection">
         <p>© 2023 Pablo Henrique. Desenvolvido com <i class="fa-solid fa-heart"></i></p>
       </div>
     </footer>
 
-    </main>
-  
+  </main>
 
-    <script src="src/scripts/index.js"></script>
-  </body>
+
+  <script src="src/scripts/index.js"></script>
+</body>
+
 </html>
