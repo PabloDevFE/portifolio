@@ -135,7 +135,7 @@ function scrollToSection(targetIndex) {
   // Rola a tela
   sections[targetIndex].scrollIntoView({ behavior: "smooth" });
 
-  // Só atualiza a corzinha do menu DEPOIS de 300ms (quando a tela já estiver quase parando)
+  // Só atualiza a corzinha do menu DEPOIS de 300ms
   scrollTimeout = setTimeout(() => {
     updateMenu(targetIndex);
   }, 300);
@@ -177,31 +177,31 @@ navLinks.forEach((link) => {
 /* ================================================================
    CARROSSEL DE PROJETOS (Rolagem Infinita PC e Mobile)
    ================================================================ */
-const track = document.getElementById('projetosTrack');
-const btnPrev = document.getElementById('btnPrev');
-const btnNext = document.getElementById('btnNext');
+const track = document.getElementById("projetosTrack");
+const btnPrev = document.getElementById("btnPrev");
+const btnNext = document.getElementById("btnNext");
 
 if (track) {
   // 1. LÓGICA PARA O PC (Botões de Navegação)
   if (btnNext && btnPrev) {
-    btnNext.addEventListener('click', () => {
+    btnNext.addEventListener("click", () => {
       const maxScroll = track.scrollWidth - track.clientWidth;
-      
+
       // Se estiver no último card, volta pro começo
       if (track.scrollLeft >= maxScroll - 10) {
-        track.scrollTo({ left: 0, behavior: 'smooth' }); 
+        track.scrollTo({ left: 0, behavior: "smooth" });
       } else {
-        track.scrollBy({ left: track.clientWidth, behavior: 'smooth' });
+        track.scrollBy({ left: track.clientWidth, behavior: "smooth" });
       }
     });
 
-    btnPrev.addEventListener('click', () => {
+    btnPrev.addEventListener("click", () => {
       // Se estiver no primeiro card, vai pro final
       if (track.scrollLeft <= 10) {
         const maxScroll = track.scrollWidth - track.clientWidth;
-        track.scrollTo({ left: maxScroll, behavior: 'smooth' }); 
+        track.scrollTo({ left: maxScroll, behavior: "smooth" });
       } else {
-        track.scrollBy({ left: -track.clientWidth, behavior: 'smooth' });
+        track.scrollBy({ left: -track.clientWidth, behavior: "smooth" });
       }
     });
   }
@@ -210,26 +210,34 @@ if (track) {
   let startX = 0;
 
   // Grava a posição do dedo quando toca na tela
-  track.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  }, { passive: true });
+  track.addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true },
+  );
 
   // Calcula para onde o dedo foi ao soltar a tela
-  track.addEventListener('touchend', (e) => {
-    const endX = e.changedTouches[0].clientX;
-    const diffX = startX - endX; // Positivo = arrastou pra esquerda (avançar)
-    
-    const maxScroll = track.scrollWidth - track.clientWidth;
+  track.addEventListener(
+    "touchend",
+    (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diffX = startX - endX; // Positivo = arrastou pra esquerda (avançar)
 
-    // Se está no ÚLTIMO card e tentou arrastar mais para a esquerda (Avançar)
-    // O valor 50px de diferença garante que foi um arraste intencional e não um toque acidental
-    if (track.scrollLeft >= maxScroll - 10 && diffX > 50) {
-      track.scrollTo({ left: 0, behavior: 'smooth' }); // Volta pro início
-    }
-    
-    // Se está no PRIMEIRO card e tentou arrastar mais para a direita (Voltar)
-    if (track.scrollLeft <= 10 && diffX < -50) {
-      track.scrollTo({ left: maxScroll, behavior: 'smooth' }); // Vai pro final
-    }
-  }, { passive: true });
+      const maxScroll = track.scrollWidth - track.clientWidth;
+
+      // Se está no ÚLTIMO card e tentou arrastar mais para a esquerda (Avançar)
+      // O valor 50px de diferença garante que foi um arraste intencional e não um toque acidental
+      if (track.scrollLeft >= maxScroll - 10 && diffX > 50) {
+        track.scrollTo({ left: 0, behavior: "smooth" }); // Volta pro início
+      }
+
+      // Se está no PRIMEIRO card e tentou arrastar mais para a direita (Voltar)
+      if (track.scrollLeft <= 10 && diffX < -50) {
+        track.scrollTo({ left: maxScroll, behavior: "smooth" }); // Vai pro final
+      }
+    },
+    { passive: true },
+  );
 }
