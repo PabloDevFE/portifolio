@@ -1,302 +1,345 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="Pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio</title>
+    <!--Usando versionamento-->
+    <link rel="stylesheet" href="src/style/style.css?v=1.1" />
+    <link rel="stylesheet" href="src/style/mq.css?v=1.1" />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfólio</title>
-  <link rel="stylesheet" href="src/style/style.css" />
-  <link rel="stylesheet" href="src/style/mq.css" />
-
-  <!--Font Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
-  <header class="header" id="header">
-    <button class="btnHeader" id="btnHeaderHamburguer">
-      <i class="fa-solid fa-bars iconBranco"></i>
-    </button>
-
-    <div class="logo">
-      <img src="src/images/logo-header.svg" alt="logo PABLO" />
-    </div>
-
-    <nav class="navigation" id="navigation">
-      <button class="btnHeader" id="btnHeaderClose">
-        <i class="fa-solid fa-x iconBranco"></i>
+  <body>
+    <header class="header" id="header">
+      <button class="btnHeader" id="btnHeaderHamburguer">
+        <i class="fa-solid fa-bars iconBranco"></i>
       </button>
-      <a href="#home" id="btnHome" class="navActive">HOME</a>
-      <a href="#sobre" id="btnSobre">SOBRE</a>
-      <a href="#skills" id="btnSkills">SKILLS</a>
-      <a href="#projetos" id="btnProjetos">PROJETOS</a>
-      <a href="#contato" id="btnContatos">CONTATO</a>
-    </nav>
-  </header>
 
-  <main class="main" id="main">
-    <section class="home" id="home">
-      <div class="limitador homeWrapper">
+      <div class="logo">
+        <img src="src/images/logo-header.svg" alt="logo PABLO" />
+      </div>
 
-        <div class="homeText">
-          <p class="saudacao">Olá, bem-vindo(a) ao meu portfólio!</p>
-          <h1>Pablo Henrique</h1>
-          <h2>Desenvolvedor Web Front-end</h2>
+      <nav class="navigation" id="navigation">
+        <button class="btnHeader" id="btnHeaderClose">
+          <i class="fa-solid fa-x iconBranco"></i>
+        </button>
+        <a href="#home" id="btnHome" class="navActive">HOME</a>
+        <a href="#sobre" id="btnSobre">SOBRE</a>
+        <a href="#skills" id="btnSkills">SKILLS</a>
+        <a href="#projetos" id="btnProjetos">PROJETOS</a>
+        <a href="#contato" id="btnContatos">CONTATO</a>
+      </nav>
+    </header>
 
-          <p class="bio">
-            Transformo ideias em experiências digitais interativas. Tenho paixão por criar interfaces limpas,
-            responsivas e otimizadas utilizando JavaScript, React, HTML e CSS.
-          </p>
+    <main class="main" id="main">
+      <section class="home" id="home">
+        <div class="limitador homeWrapper">
+          <div class="homeText">
+            <p class="saudacao">Olá, bem-vindo(a) ao meu portfólio!</p>
+            <h1>Pablo Henrique</h1>
+            <h2>Desenvolvedor Web Front-end</h2>
 
-          <div class="socialMidias">
-            <ul>
-              <li><a href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/" target="_blank"><i
-                    class="fa-brands fa-linkedin"></i></a></li>
-              <li><a href="https://github.com/PabloDevFE" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-              <li><a href="https://www.instagram.com/pablo_dev01/" target="_blank"><i
-                    class="fa-brands fa-instagram"></i></a></li>
+            <p class="bio">
+              Transformo ideias em experiências digitais interativas. Tenho
+              paixão por criar interfaces limpas, responsivas e otimizadas
+              utilizando JavaScript, React, HTML e CSS.
+            </p>
+
+            <div class="socialMidias">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://github.com/PabloDevFE" target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/pablo_dev01/"
+                    target="_blank"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="imgContainer">
+            <img
+              src="src/images/perfil-simple.png"
+              alt="Foto de perfil de Pablo Henrique"
+              class="imgPerfil"
+            />
+          </div>
+        </div>
+      </section>
+      <!--home-->
+
+      <section class="sobre" id="sobre">
+        <div class="limitador sobreWrapper">
+          <div class="sobreImgBox">
+            <!-- A div abaixo cria aquele fundo geométrico charmoso atrás da foto -->
+            <div class="imgBg"></div>
+            <img
+              src="src/images/sobre-bw.png"
+              alt="Foto sobre Pablo Henrique"
+              class="imgSobre"
+            />
+          </div>
+
+          <div class="sobreText">
+            <h2 class="sectionSubtitle">Quem sou eu</h2>
+            <h1>Sobre mim</h1>
+            <p>
+              Meu nome é Pablo Henrique, tenho 21 anos e sou desenvolvedor
+              Front-End. Sou formado em Análise e Desenvolvimento de Sistemas,
+              curso Ciência da Computação e possuo pós-graduação em Inteligência
+              Artificial.
+            </p>
+            <p>
+              Atuo na criação de interfaces modernas e responsivas utilizando
+              HTML5, CSS3, JavaScript e React, além de trabalhar com Git e
+              GitHub. Sou apaixonado por tecnologia e estou sempre buscando
+              evoluir e desenvolver soluções cada vez mais eficientes.
+            </p>
+            <p>
+              <a href="#" class="btnCv" target="_blank">
+                <i class="fa-solid fa-download"></i> Baixar Currículo
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="skills" id="skills">
+        <div class="limitador">
+          <div class="skillsHeader">
+            <h2 class="sectionSubtitle">Meu Arsenal</h2>
+            <h1>Minhas Skills</h1>
+            <p>
+              Tecnologias e ferramentas que utilizo no meu dia a dia para
+              construir aplicações web modernas, rápidas e escaláveis.
+            </p>
+          </div>
+
+          <div class="skillsGrid">
+            <!-- Skill: HTML -->
+            <div class="skillCard darkCard" style="--brand-color: #e34f26">
+              <i class="fa-brands fa-html5"></i>
+              <h3>HTML</h3>
+            </div>
+
+            <!-- Skill: CSS -->
+            <div class="skillCard darkCard" style="--brand-color: #1572b6">
+              <i class="fa-brands fa-css3-alt"></i>
+              <h3>CSS</h3>
+            </div>
+
+            <!-- Skill: JavaScript -->
+            <div class="skillCard darkCard" style="--brand-color: #f7df1e">
+              <i class="fa-brands fa-js"></i>
+              <h3>JAVASCRIPT</h3>
+            </div>
+
+            <!-- Skill: React -->
+            <div class="skillCard darkCard" style="--brand-color: #61dafb">
+              <i class="fa-brands fa-react"></i>
+              <h3>REACT</h3>
+            </div>
+
+            <!-- Skill: Git -->
+            <div class="skillCard darkCard" style="--brand-color: #f05032">
+              <i class="fa-brands fa-git-alt"></i>
+              <h3>GIT</h3>
+            </div>
+
+            <!-- Skill: GitHub -->
+            <div class="skillCard darkCard" style="--brand-color: #ffffff">
+              <i class="fa-brands fa-github"></i>
+              <h3>GITHUB</h3>
+            </div>
+          </div>
+        </div>
+      </section> <!--skills-->
+
+      <!--PROJETOS-->
+      <section class="projetos" id="projetos">
+        <div class="limitador">
+
+          <div class="projetosHeader">
+            <h2 class="sectionSubtitle">Meu Portfólio de</h2>
+            <h1>Projetos</h1>
+            <!-- Dica visível apenas no celular -->
+            <p class="scrollHintMobile"><i class="fa-solid fa-arrows-left-right"></i> Arraste para o lado</p>
+          </div>
+
+          <div class="carrosselWrapper">
+            
+            <!-- Botões de navegação (Visíveis apenas no PC) -->
+            <button class="btnNavProjeto prev" id="btnPrev"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="btnNavProjeto next" id="btnNext"><i class="fa-solid fa-chevron-right"></i></button>
+
+            <!-- Trilha do Carrossel -->
+            <div class="projetosTrack" id="projetosTrack">
+
+              <!-- CARD 1 -->
+              <div class="cardProjetoLargo">
+                <div class="imgBoxLargo">
+                  <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" />
+                  <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
+                </div>
+                <div class="contentBoxLargo">
+                  <h2>XMEN Interactive</h2>
+                  <p>
+                    Projeto interativo com temática dos X-Men. Demonstração avançada de manipulação de DOM, 
+                    eventos de clique e transições fluidas para criar uma experiência de usuário imersiva.
+                  </p>
+                  <div class="tecListLargo">
+                    <span style="--cor: var(--orange);"><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span style="--cor: var(--blue);"><i class="fa-brands fa-css3"></i> CSS</span>
+                    <span style="--cor: #F7DF1E;"><i class="fa-brands fa-js"></i> JS</span>
+                  </div>
+                  <div class="btnContainerLargo">
+                    <a href="#" target="_blank" class="btnLargo outline">Ver Código</a>
+                    <a href="#" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 2 -->
+              <div class="cardProjetoLargo">
+                <div class="imgBoxLargo">
+                  <img src="src/images/projetos/Capturar.JPG" alt="Projeto E-commerce" />
+                  <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
+                </div>
+                <div class="contentBoxLargo">
+                  <h2>E-Commerce Flow</h2>
+                  <p>
+                    Interface de uma loja virtual responsiva com carrinho de compras dinâmico. 
+                    Foco na componentização eficiente e no gerenciamento de estados da aplicação.
+                  </p>
+                  <div class="tecListLargo">
+                    <span style="--cor: #61DAFB;"><i class="fa-brands fa-react"></i> React</span>
+                    <span style="--cor: var(--blue);"><i class="fa-brands fa-css3"></i> CSS</span>
+                  </div>
+                  <div class="btnContainerLargo">
+                    <a href="#" target="_blank" class="btnLargo outline">Ver Código</a>
+                    <a href="#" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARD 3 -->
+              <div class="cardProjetoLargo">
+                <div class="imgBoxLargo">
+                  <img src="src/images/projetos/Capturar.JPG" alt="Projeto Portfólio" />
+                  <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
+                </div>
+                <div class="contentBoxLargo">
+                  <h2>Portfolio Pessoal</h2>
+                  <p>
+                    Meu portfólio pessoal construído com design moderno, animações fluidas 
+                    e Scroll Snap nativo, garantindo performance e acessibilidade em qualquer dispositivo.
+                  </p>
+                  <div class="tecListLargo">
+                    <span style="--cor: var(--orange);"><i class="fa-brands fa-html5"></i> HTML</span>
+                    <span style="--cor: var(--blue);"><i class="fa-brands fa-css3"></i> CSS</span>
+                    <span style="--cor: var(--purple);"><i class="fa-brands fa-js"></i> JS</span>
+                  </div>
+                  <div class="btnContainerLargo">
+                    <a href="#" target="_blank" class="btnLargo outline">Ver Código</a>
+                    <a href="#" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- fim track -->
+          </div><!-- fim wrapper -->
+
+        </div>
+      </section><!--projetos-->
+
+      <footer class="footer" id="contato">
+        <div class="limitador footerWrapper">
+          <!-- Lado Esquerdo: Chamada e Email -->
+          <div class="footerLeft">
+            <h1>
+              Vamos criar algo <br />
+              incrivel juntos
+            </h1>
+            <p>
+              Estou sempre aberto a novas oportunidades, projetos freelance ou
+              apenas para trocar uma ideia sobre tecnologia.
+            </p>
+
+            <a
+              href="mailto:pablo@apesdigital.com"
+              target="_blank"
+              class="bigEmail"
+            >
+              me envie um e-mail <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Lado Direito: Redes Sociais -->
+          <div class="footerRight">
+            <h3>Minhas Redes</h3>
+            <ul class="socialLinksMenu">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/pablodevfe" target="_blank">
+                  <i class="fa-brands fa-github"></i> GitHub
+                </a>
+              </li>
+              <li>
+                <a href="http://wa.me/31982340580" target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/pablo_dev01/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+              </li>
             </ul>
           </div>
         </div>
 
-        <div class="imgContainer">
-          <img src="src/images/perfil-simple.png" alt="Foto de perfil de Pablo Henrique" class="imgPerfil" />
-        </div>
-
-      </div>
-    </section><!--home-->
-
-    <section class="sobre" id="sobre">
-      <div class="limitador sobreWrapper">
-
-        <div class="sobreImgBox">
-          <!-- A div abaixo cria aquele fundo geométrico charmoso atrás da foto -->
-          <div class="imgBg"></div>
-          <img src="src/images/sobre-bw.png" alt="Foto sobre Pablo Henrique" class="imgSobre">
-        </div>
-
-        <div class="sobreText">
-          <h2 class="sectionSubtitle">Quem sou eu</h2>
-          <h1>Sobre mim</h1>
+        <!-- Linha de Copyright no final da tela -->
+        <div class="limitador copySection">
           <p>
-            Meu nome é Pablo Henrique, tenho 21 anos e sou desenvolvedor Front-End. Sou formado em Análise e
-            Desenvolvimento de Sistemas, curso Ciência da Computação e possuo pós-graduação em Inteligência Artificial.
+            © 2023 Pablo Henrique. Desenvolvido com
+            <i class="fa-solid fa-heart"></i>
           </p>
-          <p>
-            Atuo na criação de interfaces modernas e responsivas utilizando HTML5, CSS3, JavaScript e React, além de
-            trabalhar com Git e GitHub. Sou apaixonado por tecnologia e estou sempre buscando evoluir e desenvolver
-            soluções cada vez mais eficientes.
-          </p>
-          <p>
-
-            <a href="#" class="btnCv" target="_blank">
-              <i class="fa-solid fa-download"></i> Baixar Currículo
-            </a>
         </div>
+      </footer>
+    </main>
 
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="skills" id="skills">
-      <div class="limitador">
-        <div class="skillsHeader">
-          <h2 class="sectionSubtitle">Meu Arsenal</h2>
-          <h1>Minhas Skills</h1>
-          <p>Tecnologias e ferramentas que utilizo no meu dia a dia para construir aplicações web modernas, rápidas e
-            escaláveis.</p>
-        </div>
-
-        <div class="skillsGrid">
-          <!-- Skill: HTML -->
-          <div class="skillCard darkCard" style="--brand-color: #E34F26;">
-            <i class="fa-brands fa-html5"></i>
-            <h3>HTML</h3>
-          </div>
-
-          <!-- Skill: CSS -->
-          <div class="skillCard darkCard" style="--brand-color: #1572B6;">
-            <i class="fa-brands fa-css3-alt"></i>
-            <h3>CSS</h3>
-          </div>
-
-          <!-- Skill: JavaScript -->
-          <div class="skillCard darkCard" style="--brand-color: #F7DF1E;">
-            <i class="fa-brands fa-js"></i>
-            <h3>JAVASCRIPT</h3>
-          </div>
-
-          <!-- Skill: React -->
-          <div class="skillCard darkCard" style="--brand-color: #61DAFB;">
-            <i class="fa-brands fa-react"></i>
-            <h3>REACT</h3>
-          </div>
-
-          <!-- Skill: Git -->
-          <div class="skillCard darkCard" style="--brand-color: #F05032;">
-            <i class="fa-brands fa-git-alt"></i>
-            <h3>GIT</h3>
-          </div>
-
-          <!-- Skill: GitHub -->
-          <div class="skillCard darkCard" style="--brand-color: #ffffff;">
-            <i class="fa-brands fa-github"></i>
-            <h3>GITHUB</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!--PROJETOS-->
-    <section class="projetos" id="projetos">
-      <div class="limitador">
-
-        <div class="projetosHeader">
-          <h2 class="sectionSubtitle subtitleBranco">Meu Portfólio de</h2>
-          <h1>Projetos</h1>
-        </div>
-
-        <div class="projetosGrid">
-
-          <!-- CARD 1 -->
-          <div class="cardProjeto">
-            <div class="imgWrapper">
-              <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard" />
-            </div>
-
-            <div class="projetosContent">
-              <h2>XMEN</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                veritatis repellat cupiditate dolorum assumenda ullam non cum.
-              </p>
-
-              <div class="tecList">
-                <i class="fa-brands fa-css3" title="CSS3"></i>
-                <i class="fa-brands fa-html5" title="HTML5"></i>
-                <i class="fa-brands fa-js" title="JavaScript"></i>
-              </div>
-
-              <div class="btnContainer">
-                <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
-                <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD 2 -->
-          <div class="cardProjeto">
-            <div class="imgWrapper">
-              <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard" />
-            </div>
-
-            <div class="projetosContent">
-              <h2>XMEN</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                veritatis repellat cupiditate dolorum assumenda ullam non cum.
-              </p>
-
-              <div class="tecList">
-                <i class="fa-brands fa-css3" title="CSS3"></i>
-                <i class="fa-brands fa-html5" title="HTML5"></i>
-                <i class="fa-brands fa-js" title="JavaScript"></i>
-              </div>
-
-              <div class="btnContainer">
-                <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
-                <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- CARD 3 -->
-          <div class="cardProjeto">
-            <div class="imgWrapper">
-              <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" class="imgCard" />
-            </div>
-
-            <div class="projetosContent">
-              <h2>XMEN</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                veritatis repellat cupiditate dolorum assumenda ullam non cum.
-              </p>
-
-              <div class="tecList">
-                <i class="fa-brands fa-css3" title="CSS3"></i>
-                <i class="fa-brands fa-html5" title="HTML5"></i>
-                <i class="fa-brands fa-js" title="JavaScript"></i>
-              </div>
-
-              <div class="btnContainer">
-                <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnCard">Código</a>
-                <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnCard solid">Acessar</a>
-              </div>
-            </div>
-          </div>
-          <!-- Fim dos Cards -->
-
-        </div>
-      </div>
-    </section><!--projetos-->
-
-
-    <footer class="footer" id="contato">
-      <div class="limitador footerWrapper">
-
-        <!-- Lado Esquerdo: Chamada e Email -->
-        <div class="footerLeft">
-          <h1>Vamos criar algo <br> incrivel juntos</h1>
-          <p>Estou sempre aberto a novas oportunidades, projetos freelance ou apenas para trocar uma ideia sobre
-            tecnologia.</p>
-
-          <a href="mailto:pablo@apesdigital.com" target="_blank" class="bigEmail">
-            me envie um e-mail <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
-
-        <!-- Lado Direito: Redes Sociais -->
-        <div class="footerRight">
-          <h3>Minhas Redes</h3>
-          <ul class="socialLinksMenu">
-            <li>
-              <a href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/" target="_blank">
-                <i class="fa-brands fa-linkedin"></i> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/pablodevfe" target="_blank">
-                <i class="fa-brands fa-github"></i> GitHub
-              </a>
-            </li>
-            <li>
-              <a href="http://wa.me/31982340580" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/pablo_dev01/" target="_blank">
-                <i class="fa-brands fa-instagram"></i> Instagram
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-
-      <!-- Linha de Copyright no final da tela -->
-      <div class="limitador copySection">
-        <p>© 2023 Pablo Henrique. Desenvolvido com <i class="fa-solid fa-heart"></i></p>
-      </div>
-    </footer>
-
-  </main>
-
-
-  <script src="src/scripts/index.js"></script>
-</body>
-
+    <script src="src/scripts/index.js?v=1.1"></script>
+  </body>
 </html>

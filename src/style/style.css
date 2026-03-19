@@ -506,265 +506,244 @@ main h1 {
   width: 100%;
 }
 
-/*projetos*/
+/*============================================= projetos =============================================*/
 .projetos {
-  background-color: var(--orange);
+  background-color: var(--offWhite); /* Alterna o fundo para claro, dando respiro */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centraliza verticalmente na tela */
-}
-
-.subtitleBranco {
-  color: #fff;
-}
-
-.projetos h1 {
-  color: var(--offWhite);
-  text-align: center;
-  margin-bottom: 0em;
-}
-.projetos {
-  background: linear-gradient(135deg, var(--orange), #e65a1f);
+  justify-content: center;
 }
 
 .projetosHeader {
   text-align: center;
-  margin-bottom: 1.5em; /* Reduzido para economizar espaço vertical */
+  margin-bottom: 2em;
 }
 
 .projetosHeader h1 {
-  font-size: clamp(35px, 5vw, 60px); /* Fonte levemente menor para caber em notebooks */
-  color: var(--white);
+  font-size: clamp(40px, 6vw, 70px);
+  color: var(--offBlack);
   margin-bottom: 0.2em;
+  text-shadow: none;
 }
 
-/* ================= AJUSTE NOS CARDS PARA CABEREM NO SLIDE ================= */
-.imgWrapper {
+.projetosHeader .sectionSubtitle {
+  color: var(--purple); /* Traz o roxo pra dar vida */
+}
+
+.scrollHintMobile {
+  display: none; /* Escondido no PC */
+}
+
+/* CONTAINER E CARROSSEL */
+.carrosselWrapper {
+  position: relative;
   width: 100%;
-  height: 150px; /* Reduzido de 180px/220px para garantir que o card caiba na tela */
-  overflow: hidden;
+  max-width: 1100px; /* Aumentei a largura do card para deixá-lo mais imponente */
+  margin: 0 auto;
 }
 
-.projetosContent h2 {
-  font-size: 1.8rem; /* Título do card mais compacto */
-}
-
-.projetosContent p {
-  font-size: 0.9rem; /* Texto do card mais compacto */
-  margin-bottom: 1em;
-}
-
-.projetosGrid {
+.projetosTrack {
   display: flex;
-  justify-content: center; /* Centraliza os cards no meio da tela laranja */
-  gap: 1.5em;
-  padding: 1em 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-/* =================CARROSSEL DE PROJETOS ================= */
-.projetosGrid {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto; /* Mantém a funcionalidade de arrastar no celular invisível */
   gap: 2em;
-  padding: 1em;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   
-  /* Centraliza os cards perfeitamente na tela do computador */
-  justify-content: center;
-  align-items: stretch;
-  
-  /* Scroll Snap Horizontal invisível */
-  scroll-snap-type: x mandatory; 
-  
-  /* MÁGICA: Esconde a barra de rolagem completamente (Firefox e IE) */
-  scrollbar-width: none; 
-  -ms-overflow-style: none; 
+  /* CORREÇÃO DA SOMBRA: Padding generoso em todos os lados */
+  /* O espaço extra nas laterais (1.5em) e embaixo (3em) impede o corte da sombra */
+  padding: 2em 1.5em 3.5em 1.5em; 
 }
 
-/* MÁGICA: Esconde a barra de rolagem completamente (Chrome, Safari, Edge) */
-.projetosGrid::-webkit-scrollbar {
+.projetosTrack::-webkit-scrollbar {
   display: none; 
 }
 
-.cardProjeto {
-  background-color: var(--offWhite);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  
-  /* Tamanho ideal para não estourar a altura da tela */
-  width: clamp(280px, 80vw, 350px);
-  flex: 0 0 auto; 
-  
-  scroll-snap-align: center; 
-}
-
-/* Ajustes finos para garantir que os cards caibam na altura do monitor */
-.imgWrapper {
-  width: 100%;
-  height: 180px; /* Altura reduzida para caber melhor na tela */
-  overflow: hidden;
-}
-
-.imgCard {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.cardProjeto:hover .imgCard {
-  transform: scale(1.05);
-}
-
-.projetosContent {
-  padding: 1.2em; /* Padding levemente reduzido */
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; 
-}
-
-.projetosContent h2 {
-  font-family: var(--fontDestaque);
-  font-size: 2rem; /* Fonte um pouco menor para economizar espaço vertical */
-  color: var(--offBlack);
-  margin-bottom: 0.5rem;
-}
-
-.projetosContent p {
-  color: var(--gray);
-  font-size: 0.95rem;
-  margin-bottom: 1.2rem;
-  line-height: 1.5;
-  flex-grow: 1; 
-}
-
-.tecList {
-  display: flex;
-  gap: 1em;
-  font-size: 1.3rem;
+/* BOTÕES DE NAVEGAÇÃO (Setas) */
+.btnNavProjeto {
+  position: absolute;
+  top: 45%; /* Subi um pouquinho para compensar o padding do fundo */
+  transform: translateY(-50%);
+  width: 55px; /* Deixei o botão levemente maior para acompanhar o card */
+  height: 55px;
+  background-color: var(--white);
+  border: 2px solid var(--offWhite);
+  border-radius: 50%;
+  font-size: 1.5rem;
   color: var(--purple);
-  margin-bottom: 1.2rem;
-}
-
-.btnContainer {
-  display: flex;
-  gap: 1em;
-}
-
-.btnCard {
-  flex: 1; 
-  text-align: center;
-  padding: 0.7em 0;
-  border-radius: 6px;
-  font-family: var(--fontText);
-  font-weight: bold;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  border: 2px solid var(--offBlack);
-  color: var(--offBlack);
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
   transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.btnCard.solid {
-  background-color: var(--offBlack);
+.btnNavProjeto:hover {
+  background-color: var(--purple);
   color: var(--white);
+  transform: translateY(-50%) scale(1.1);
 }
 
-.btnCard:hover {
-  background-color: var(--blue);
-  border-color: var(--blue);
-  color: var(--white);
+.btnNavProjeto.prev { left: -15px; }
+.btnNavProjeto.next { right: -15px; }
+
+/* LAYOUT DO CARD LARGO (HORIZONTAL) */
+.cardProjetoLargo {
+  min-width: 100%;
+  scroll-snap-align: center;
+  background-color: var(--white);
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.02);
+  
+  /* NOVO TAMANHO: Fica maior no PC (até 550px), mas respeita monitores menores */
+  height: clamp(400px, 50vh, 550px); 
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.cardProjeto:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+.cardProjetoLargo:hover {
+  transform: translateY(-10px); /* O card flutua de leve ao passar o mouse */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); /* Sombra aumenta, mas sem cortar */
 }
 
-.imgWrapper {
-  width: 100%;
-  height: 220px;
+.imgBoxLargo {
+  flex: 0 0 45%; /* Fixa a imagem em 45% do card, dando mais espaço pro texto (55%) */
+  position: relative;
   overflow: hidden;
 }
 
-.imgCard {
+.imgBoxLargo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.cardProjeto:hover .imgCard {
+.cardProjetoLargo:hover .imgBoxLargo img {
   transform: scale(1.05);
 }
 
-.projetosContent {
-  padding: 1.5em;
+.contentBoxLargo {
+  flex: 1; 
+  padding: 3em; /* Padding maior para acompanhar o card maior */
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  /* Faz o conteúdo ocupar o espaço restante */
+  justify-content: center;
 }
 
-.projetosContent h2 {
+.overlayLargo {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(93, 74, 216, 0.7); /* Fundo roxo translúcido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlayLargo i {
+  color: #fff;
+  font-size: 4rem;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.cardProjetoLargo:hover .overlayLargo { opacity: 1; }
+.cardProjetoLargo:hover .overlayLargo i { transform: translateY(0); }
+
+.contentBoxLargo {
+  flex: 1; /* Ocupa os outros 50% */
+  padding: 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contentBoxLargo h2 {
   font-family: var(--fontDestaque);
   font-size: 2.5rem;
   color: var(--offBlack);
   margin-bottom: 0.5rem;
 }
 
-.projetosContent p {
+.contentBoxLargo p {
   color: var(--gray);
   font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-  flex-grow: 1;
-  /* Empurra os botões pro final do card */
+  line-height: 1.6;
+  margin-bottom: 1.5em;
 }
 
-.tecList {
+.tecListLargo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin-bottom: 2em;
+}
+
+.tecListLargo span {
+  background-color: rgba(0,0,0,0.03);
+  color: var(--offBlack);
+  font-family: var(--fontText);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tecListLargo span i {
+  color: var(--cor); /* Pega a cor inline do HTML (Laranja, azul, etc) */
+  font-size: 1.1rem;
+}
+
+.btnContainerLargo {
   display: flex;
   gap: 1em;
-  font-size: 1.5rem;
-  color: var(--purple);
-  margin-bottom: 1.5rem;
 }
 
-.btnContainer {
-  display: flex;
-  gap: 1em;
-}
-
-.btnCard {
+.btnLargo {
   flex: 1;
-  /* Faz os botões terem o mesmo tamanho */
   text-align: center;
   padding: 0.8em 0;
-  border-radius: 6px;
+  border-radius: 50px;
   font-family: var(--fontText);
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
-  border: 2px solid var(--offBlack);
-  color: var(--offBlack);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.btnCard.solid {
+.btnLargo.outline {
+  background-color: transparent;
+  border: 2px solid var(--offBlack);
+  color: var(--offBlack);
+}
+
+.btnLargo.solid {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  color: var(--white);
+}
+
+.btnLargo.outline:hover {
   background-color: var(--offBlack);
   color: var(--white);
 }
 
-.btnCard:hover {
-  background-color: var(--blue);
-  border-color: var(--blue);
-  color: var(--white);
+.btnLargo.solid:hover {
+  background-color: var(--orange);
+  border-color: var(--orange);
+  box-shadow: 0px 8px 15px rgba(255, 133, 84, 0.4);
 }
 
 /*============================================= contato / footer =============================================*/

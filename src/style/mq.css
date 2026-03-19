@@ -138,20 +138,53 @@
     font-size: 1.2rem;
   }
 
-  /* projetos no mobile */
-  /*projetos no mobile*/
-  .projetosHeader p {
-    font-size: 0.95rem;
-    padding: 0 1em;
-  }
-   
-  .projetosGrid {
-    justify-content: flex-start; /* Permite arrastar os projetos para o lado com o dedo */
-    padding: 1em 0.5em;
+/* projetos no mobile */
+  .btnNavProjeto {
+    display: none; /* Esconde as setas no celular */
   }
 
-  .cardProjeto {
-    width: 280px; /* Tamanho seguro do card para celular */
+  .scrollHintMobile {
+    display: block;
+    color: var(--orange);
+    font-family: var(--fontText);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    animation: pulseHint 2s infinite;
+  }
+
+  @keyframes pulseHint {
+    0%, 100% { opacity: 0.5; transform: translateX(0); }
+    50% { opacity: 1; transform: translateX(5px); }
+  }
+
+  .projetosTrack {
+    gap: 1.5em;
+    /* CORREÇÃO DA SOMBRA NO CELULAR: Padding nas laterais e embaixo */
+    padding: 1.5em 1em 3em 1em; 
+  }
+
+  .cardProjetoLargo {
+    flex-direction: column;
+    height: auto; 
+    /* Reduzi de 90vw para 85vw. Isso dá margem para a sombra respirar dos lados e mostra o próximo card direitinho */
+    width: 85vw; 
+    min-width: 85vw; 
+  }
+
+  .imgBoxLargo {
+    height: 220px; /* Imagem levemente mais alta no celular para dar presença */
+    flex: none; 
+  }
+
+  .contentBoxLargo {
+    padding: 1.8em 1.5em; /* Ajuste fino no espaço do texto */
+  }
+  .contentBoxLargo h2 {
+    font-size: 2rem;
+  }
+
+  .btnContainerLargo {
+    flex-direction: column; /* Botões um embaixo do outro no celular */
   }
 
 /* footer no mobile */
