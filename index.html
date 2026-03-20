@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfólio</title>
+    <title>Pablo Henrique - Desenvolvedor Front-end</title>
+    <meta name="description" content="Portfólio de Pablo Henrique, desenvolvedor front-end especializado em HTML5, CSS3, JavaScript e React. Criação de sites modernos, responsivos e otimizados para SEO, com foco em performance e experiência do usuário.">
+    <meta name="author" content="Pablo Henrique">
+    <meta name="robots" content="index, follow">
+
+    <!--Melhorias no compartilhamento do link-->
+    <meta property="og:title" content="Portfólio Pablo Henrique">
+    <meta property="og:description" content="Desenvolvedor Front-End especializado em HTML, CSS e JS">
+    <meta property="og:image" content="https://apesdigital.com/src/images/perfil-simple.png">
+    <meta property="og:url" content="https://apesdigital.com">
+    
     <!--Usando versionamento-->
     <link rel="stylesheet" href="src/style/style.css?v=1.1" />
     <link rel="stylesheet" href="src/style/mq.css?v=1.1" />
@@ -15,6 +25,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Pablo Henrique",
+        "jobTitle": "Front-End Developer",
+        "url": "https://apesdigital.com",
+        "image": "https://apesdigital.com/src/images/perfil-simple.png",
+        "sameAs": [
+          "https://github.com/pablodevfe",
+          "https://www.instagram.com/pablo_dev01"
+        ]
+      }
+  </script>
   </head>
 
   <body>
@@ -101,6 +126,7 @@
             <div class="imgBg"></div>
             <img
               src="src/images/sobre-bw.png"
+              loading="lazy"
               alt="Foto sobre Pablo Henrique"
               class="imgSobre"
             />
@@ -204,14 +230,14 @@
             <!-- Trilha do Carrossel -->
             <div class="projetosTrack" id="projetosTrack">
 
-              <!-- CARD 1 -->
+              <!-- CARD 1 - XMEN -->
               <div class="cardProjetoLargo">
                 <div class="imgBoxLargo">
-                  <img src="src/images/projetos/Capturar.JPG" alt="Projeto XMEN" />
+                  <img src="src/images/projetos/projetoXmen.jpg" loading="lazy" alt="Projeto XMEN" />
                   <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
                 </div>
                 <div class="contentBoxLargo">
-                  <h2>XMEN Interactive</h2>
+                  <h2>XMEN INTERATIVO</h2>
                   <p>
                     Projeto interativo com temática dos X-Men. Demonstração avançada de manipulação de DOM, 
                     eventos de clique e transições fluidas para criar uma experiência de usuário imersiva.
@@ -219,46 +245,46 @@
                   <div class="tecListLargo">
                     <span style="--cor: var(--orange);"><i class="fa-brands fa-html5"></i> HTML</span>
                     <span style="--cor: var(--blue);"><i class="fa-brands fa-css3"></i> CSS</span>
-                    <span style="--cor: #F7DF1E;"><i class="fa-brands fa-js"></i> JS</span>
+                    <span style="--cor: var(--purple);"><i class="fa-brands fa-js"></i> JS</span>
                   </div>
                   <div class="btnContainerLargo">
-                    <a href="#" target="_blank" class="btnLargo outline">Ver Código</a>
-                    <a href="#" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                    <a href="https://github.com/PabloDevFE/projetos/tree/main/paginaXmens" target="_blank" class="btnLargo outline">Ver Código</a>
+                    <a href="https://pablodevfe.github.io/projetos/paginaXmens" target="_blank" class="btnLargo solid">Acessar Projeto</a>
                   </div>
                 </div>
               </div>
 
-              <!-- CARD 2 -->
+              <!-- CARD 2 - Laços da Dora-->
               <div class="cardProjetoLargo">
                 <div class="imgBoxLargo">
-                  <img src="src/images/projetos/Capturar.JPG" alt="Projeto E-commerce" />
+                  <img src="src/images/projetos/projetoLacosDaDora.jpg" loading="lazy" alt="Landing page Laços da Dora" />
                   <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
                 </div>
                 <div class="contentBoxLargo">
-                  <h2>E-Commerce Flow</h2>
+                  <h2>LACOS DA DORA</h2>
                   <p>
-                    Interface de uma loja virtual responsiva com carrinho de compras dinâmico. 
-                    Foco na componentização eficiente e no gerenciamento de estados da aplicação.
+                    Landing page com visual acolhedor para uma microempreendedora que produz laços caseiros feitos sob encomendas.
                   </p>
                   <div class="tecListLargo">
-                    <span style="--cor: #61DAFB;"><i class="fa-brands fa-react"></i> React</span>
+                    <span style="--cor: var(--orange);"><i class="fa-brands fa-html5"></i> HTML</span>
                     <span style="--cor: var(--blue);"><i class="fa-brands fa-css3"></i> CSS</span>
+                    <span style="--cor: var(--purple);"><i class="fa-brands fa-js"></i> JS</span>
                   </div>
                   <div class="btnContainerLargo">
-                    <a href="#" target="_blank" class="btnLargo outline">Ver Código</a>
-                    <a href="#" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                    <a href="https://github.com/PabloDevFE/pages/tree/main/LacosDaDora" target="_blank" class="btnLargo outline">Ver Código</a>
+                    <a href="https://pablodevfe.github.io/pages/LacosDaDora/" target="_blank" class="btnLargo solid">Acessar Projeto</a>
                   </div>
                 </div>
               </div>
 
-              <!-- CARD 3 -->
+              <!-- CARD 3 - Portifólio -->
               <div class="cardProjetoLargo">
                 <div class="imgBoxLargo">
-                  <img src="src/images/projetos/Capturar.JPG" alt="Projeto Portfólio" />
+                  <img src="src/images/projetos/projetoPortifolio.jpg" loading="lazy" alt="Projeto Portfólio" />
                   <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
                 </div>
                 <div class="contentBoxLargo">
-                  <h2>Portfolio Pessoal</h2>
+                  <h2>PORTFOLIO</h2>
                   <p>
                     Meu portfólio pessoal construído com design moderno, animações fluidas 
                     e Scroll Snap nativo, garantindo performance e acessibilidade em qualquer dispositivo.
@@ -269,8 +295,8 @@
                     <span style="--cor: var(--purple);"><i class="fa-brands fa-js"></i> JS</span>
                   </div>
                   <div class="btnContainerLargo">
-                    <a href="#" target="_blank" class="btnLargo outline">Ver Código</a>
-                    <a href="#" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                    <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnLargo outline">Ver Código</a>
+                    <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnLargo solid">Acessar Projeto</a>
                   </div>
                 </div>
               </div>
@@ -292,8 +318,8 @@
               incrivel juntos
             </h1>
             <p>
-              Estou sempre aberto a novas oportunidades, projetos freelance ou
-              apenas para trocar uma ideia sobre tecnologia.
+              Caso tenha interesse em desenvolver um projeto, parceria ou oportunidade profissional, 
+              fico à disposição para contato. Será um prazer conversar e entender como posso contribuir.
             </p>
 
             <a
@@ -329,7 +355,7 @@
               </li>
               <li>
                 <a
-                  href="https://www.instagram.com/pablo_dev01/"
+                  href="https://www.instagram.com/pablo_dev01"
                   target="_blank"
                 >
                   <i class="fa-brands fa-instagram"></i> Instagram
