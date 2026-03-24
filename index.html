@@ -38,6 +38,13 @@
     <meta property="og:description" content="Desenvolvedor Front-End especializado em HTML, CSS e JS">
     <meta property="og:image" content="https://apesdigital.com/src/images/perfil-simple.png">
     <meta property="og:url" content="https://apesdigital.com">
+
+    <!--TAGS PARA SEO MOBILE-->
+    <link rel="canonical" href="https://apesdigital.com" />
+    <meta name="theme-color" content="#161a1c">
+    
+    <!--Preconnect para carregar o FontAwesome mais rápido-->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     
     <!--Usando versionamento-->
     <link rel="stylesheet" href="src/style/style.css?v=1.1" />
@@ -70,7 +77,7 @@
   <body>
     <!-- CABEÇALHO -->
     <header class="header" id="header">
-      <button class="btnHeader" id="btnHeaderHamburguer">
+      <button class="btnHeader" id="btnHeaderHamburguer" aria-label="Abrir menu de navegação">
         <i class="fa-solid fa-bars iconBranco"></i>
       </button>
 
@@ -79,7 +86,7 @@
       </div>
 
       <nav class="navigation" id="navigation">
-        <button class="btnHeader" id="btnHeaderClose">
+        <button class="btnHeader" id="btnHeaderClose" aria-label="Fechar menu de navegação">
           <i class="fa-solid fa-x iconBranco"></i>
         </button>
         <a href="#home" id="btnHome" class="navActive">HOME</a>
@@ -113,18 +120,26 @@
                   <a
                     href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/"
                     target="_blank"
+                    rel="noopener noreferrer" 
+                    aria-label="Meu perfil no LinkedIn"
                     ><i class="fa-brands fa-linkedin"></i
                   ></a>
                 </li>
                 <li>
-                  <a href="https://github.com/PabloDevFE" target="_blank"
-                    ><i class="fa-brands fa-github"></i
+                  <a 
+                  href="https://github.com/PabloDevFE" 
+                  target="_blank"
+                  rel="noopener noreferrer" 
+                  aria-label="Meu perfil no GitHub"
+                  ><i class="fa-brands fa-github"></i
                   ></a>
                 </li>
                 <li>
                   <a
                     href="https://www.instagram.com/pablo_dev01/"
                     target="_blank"
+                    rel="noopener noreferrer" 
+                    aria-label="Meu perfil no Instagram"
                     ><i class="fa-brands fa-instagram"></i
                   ></a>
                 </li>
@@ -137,6 +152,9 @@
               src="src/images/perfil-simple.png"
               alt="Foto de perfil de Pablo Henrique"
               class="imgPerfil"
+              width="450"
+              height="450"
+              fetchpriority="high"
             />
           </div>
         </div>
@@ -154,6 +172,8 @@
               loading="lazy"
               alt="Foto sobre Pablo Henrique"
               class="imgSobre"
+              width="350"
+              height="400"
             />
           </div>
 
@@ -258,7 +278,12 @@
               <!-- CARD 1 - XMEN -->
               <div class="cardProjetoLargo">
                 <div class="imgBoxLargo">
-                  <img src="src/images/projetos/projetoXmen.jpg" loading="lazy" alt="Projeto XMEN" />
+                  <img src="src/images/projetos/projetoXmen.jpg" 
+                  loading="lazy" 
+                  alt="Projeto XMEN" 
+                  width="300"
+                  height="200"
+                  />
                   <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
                 </div>
                 <div class="contentBoxLargo">
@@ -273,8 +298,8 @@
                     <span style="--cor: var(--purple);"><i class="fa-brands fa-js"></i> JS</span>
                   </div>
                   <div class="btnContainerLargo">
-                    <a href="https://github.com/PabloDevFE/projetos/tree/main/paginaXmens" target="_blank" class="btnLargo outline">Ver Código</a>
-                    <a href="https://pablodevfe.github.io/projetos/paginaXmens" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                    <a href="https://github.com/PabloDevFE/projetos/tree/main/paginaXmens" target="_blank" class="btnLargo outline" rel="noopener noreferrer">Ver Código</a>
+                    <a href="https://pablodevfe.github.io/projetos/paginaXmens" target="_blank" class="btnLargo solid" rel="noopener noreferrer">Acessar Projeto</a>
                   </div>
                 </div>
               </div>
@@ -282,7 +307,12 @@
               <!-- CARD 2 - Laços da Dora-->
               <div class="cardProjetoLargo">
                 <div class="imgBoxLargo">
-                  <img src="src/images/projetos/projetoLacosDaDora.jpg" loading="lazy" alt="Landing page Laços da Dora" />
+                  <img src="src/images/projetos/projetoLacosDaDora.jpg" 
+                  loading="lazy" 
+                  alt="Landing page Laços da Dora" 
+                  width="300"
+                  height="200"
+                  />
                   <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
                 </div>
                 <div class="contentBoxLargo">
@@ -296,8 +326,8 @@
                     <span style="--cor: var(--purple);"><i class="fa-brands fa-js"></i> JS</span>
                   </div>
                   <div class="btnContainerLargo">
-                    <a href="https://github.com/PabloDevFE/pages/tree/main/LacosDaDora" target="_blank" class="btnLargo outline">Ver Código</a>
-                    <a href="https://pablodevfe.github.io/pages/LacosDaDora/" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                    <a href="https://github.com/PabloDevFE/pages/tree/main/LacosDaDora" target="_blank" class="btnLargo outline" rel="noopener noreferrer">Ver Código</a>
+                    <a href="https://pablodevfe.github.io/pages/LacosDaDora/" target="_blank" class="btnLargo solid" rel="noopener noreferrer">Acessar Projeto</a>
                   </div>
                 </div>
               </div>
@@ -305,7 +335,12 @@
               <!-- CARD 3 - Portifólio -->
               <div class="cardProjetoLargo">
                 <div class="imgBoxLargo">
-                  <img src="src/images/projetos/projetoPortifolio.jpg" loading="lazy" alt="Projeto Portfólio" />
+                  <img src="src/images/projetos/projetoPortifolio.jpg" 
+                  loading="lazy" 
+                  alt="Projeto Portfólio"
+                  width="300"
+                  height="200"
+                  />
                   <div class="overlayLargo"><i class="fa-brands fa-github"></i></div>
                 </div>
                 <div class="contentBoxLargo">
@@ -320,8 +355,8 @@
                     <span style="--cor: var(--purple);"><i class="fa-brands fa-js"></i> JS</span>
                   </div>
                   <div class="btnContainerLargo">
-                    <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnLargo outline">Ver Código</a>
-                    <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnLargo solid">Acessar Projeto</a>
+                    <a href="https://github.com/PabloDevFE/portifolio" target="_blank" class="btnLargo outline" rel="noopener noreferrer">Ver Código</a>
+                    <a href="https://pablodevfe.github.io/portifolio/" target="_blank" class="btnLargo solid" rel="noopener noreferrer">Acessar Projeto</a>
                   </div>
                 </div>
               </div>
@@ -364,17 +399,24 @@
                 <a
                   href="https://www.linkedin.com/in/pablo-henrique-27b9a1240/"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
               </li>
               <li>
-                <a href="https://github.com/pablodevfe" target="_blank">
+                <a href="https://github.com/pablodevfe" 
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                   <i class="fa-brands fa-github"></i> GitHub
                 </a>
               </li>
               <li>
-                <a href="http://wa.me/31982340580" target="_blank">
+                <a href="http://wa.me/31982340580" 
+                target="_blank"
+                rel="noopener noreferrer"
+                >
                   <i class="fa-brands fa-whatsapp"></i> WhatsApp
                 </a>
               </li>
@@ -382,6 +424,7 @@
                 <a
                   href="https://www.instagram.com/pablo_dev01"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <i class="fa-brands fa-instagram"></i> Instagram
                 </a>

@@ -26,6 +26,9 @@
   /*==================================== header ====================================*/
   .btnHeader {
     display: block;
+    width: 48px;
+    height: 48px; 
+    padding: 10px;
   }
 
   .navigation {
@@ -46,6 +49,12 @@
   @keyframes showMenu {
     from {margin-left: -100vw;}
     to {margin-left: 0vw;}
+  }
+
+  .navigation > a {
+    padding: 10px;
+    min-width: 150px;
+    text-align: center;
   }
 
   /*==================================== main ====================================*/
@@ -80,6 +89,12 @@
 
   .socialMidias ul {
     justify-content: center;
+    gap: 1.5em;
+  }
+
+  .socialMidias a {
+  width: 55px; 
+  height: 55px;
   }
 
   .imgPerfil {

@@ -2,21 +2,25 @@
 @font-face {
   font-family: "Another Tag";
   src: url(../fonts/aAnotherTag.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Gameshow";
   src: url(../fonts/Gameshow.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Made Tommy";
   src: url(../fonts/MADE\ TOMMY\ Regular_PERSONAL\ USE.otf) format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Secret";
   src: url(../fonts/SECRETODEMOREGULAR.TTF) format("truetype");
+  font-display: swap;
 }
 
 * {
