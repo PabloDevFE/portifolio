@@ -41,6 +41,18 @@ body {
   overflow: hidden; 
 }
 
+/* NOVO CÓDIGO: FIX PARA TABLETS E DISPOSITIVOS TOUCH DE TELA GRANDE*/
+/* A regra (pointer: coarse) detecta se o dispositivo principal usa o DEDO (touch),
+   independentemente do tamanho da tela (Pega iPads, Tablets Samsung, etc). */
+@media (pointer: coarse) {
+  html {
+    scroll-snap-type: y mandatory; /* Ativa o "imã" nativo do navegador */
+  }
+  body {
+    overflow-y: auto !important; /* Destrava a rolagem pelo dedo */
+  }
+}
+
 /* Força as seções a terem exatamente o tamanho da tela para parecerem slides */
 main section, .footer {
   padding: 5em 1em;
