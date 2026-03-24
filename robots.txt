@@ -1,0 +1,10 @@
+# Arquivo robots.txt para https://apesdigital.com
+
+# Define as regras para TODOS os robos de busca (Google, Bing, Yahoo, etc)
+User-agent: *
+
+# Permite que os robos leiam todo o site (Isso e muito bom para seu SEO)
+Allow: /
+
+# Diz aos robos exatamente onde esta o mapa do seu site
+Sitemap: https://apesdigital.com/sitemap.xml
